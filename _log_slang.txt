@@ -1,0 +1,1770 @@
+[    1s] Memory limit set to 331243578KB
+[    1s] Using BUILD_ROOT=/mnt/workers/root_3
+[    1s] Using BUILD_ARCH=riscv64
+[    1s] 
+[    2s] 
+[    2s] riscv64-oe2309-iscas-lion-docker-chroot-01-20c144g started "build slang.spec" at Mon Apr  1 14:43:09 UTC 2024.
+[    2s] 
+[    2s] Building slang for project 'openEuler:24.03:fix' repository 'standard' arch 'riscv64' srcmd5 '9c42d5fe6ddece6083fcd40316dbfec5'
+[    2s] 
+[    2s] processing recipe /mnt/workers/root_3/.build-srcdir/slang.spec ...
+[    3s] running changelog2spec --target rpm --file /mnt/workers/root_3/.build-srcdir/slang.spec
+[    3s] init_buildsystem --configdir /var/run/obs/worker/3/build/configs --cachedir /var/cache/build --clean --rpmlist /mnt/workers/root_3/.build.rpmlist /mnt/workers/root_3/.build-srcdir/slang.spec build ...
+[   11s] cycle: filesystem -> bash
+[   11s]   breaking dependency filesystem -> bash
+[   11s] cycle: rpm-libs -> rpm
+[   11s]   breaking dependency rpm -> rpm-libs
+[   11s] [1/29] preinstalling filesystem...
+[   12s] [2/29] preinstalling glibc...
+[   15s] [3/29] preinstalling libatomic...
+[   16s] [4/29] preinstalling libdb...
+[   17s] [5/29] preinstalling libgpg-error...
+[   18s] [6/29] preinstalling lz4...
+[   18s] [7/29] preinstalling pcre2...
+[   19s] [8/29] preinstalling xz-libs...
+[   19s] [9/29] preinstalling zlib...
+[   19s] [10/29] preinstalling zstd...
+[   20s] [11/29] preinstalling attr...
+[   21s] [12/29] preinstalling bash...
+[   22s] [13/29] preinstalling pesign-obs-integration...
+[   22s] [14/29] preinstalling selinux-policy-targeted...
+[   25s] [15/29] preinstalling bzip2...
+[   25s] [16/29] preinstalling cmake...
+[   31s] [17/29] preinstalling compat-openssl11-libs...
+[   32s] [18/29] preinstalling libacl...
+[   33s] [19/29] preinstalling libcap...
+[   33s] [20/29] preinstalling libgcrypt...
+[   34s] [21/29] preinstalling libselinux...
+[   34s] [22/29] preinstalling lua...
+[   35s] [23/29] preinstalling openssl-libs...
+[   36s] [24/29] preinstalling popt...
+[   36s] [25/29] preinstalling systemd-libs...
+[   37s] [26/29] preinstalling rpm...
+[   37s] [27/29] preinstalling dbus-libs...
+[   38s] [28/29] preinstalling rpm-libs...
+[   38s] [29/29] preinstalling digest-list-tools...
+[   40s] initializing rpm db...
+[   43s] reordering...cycle: bash -> coreutils
+[   43s]   breaking dependency coreutils -> bash
+[   43s] cycle: bash -> coreutils -> info
+[   43s]   breaking dependency coreutils -> info
+[   43s] cycle: glibc -> basesystem -> filesystem -> bash -> coreutils -> gmp -> pkgconf
+[   43s]   breaking dependency filesystem -> bash
+[   43s] cycle: glibc -> basesystem -> filesystem -> coreutils -> gmp -> pkgconf
+[   43s]   breaking dependency coreutils -> gmp
+[   43s] cycle: glibc -> basesystem -> filesystem -> coreutils
+[   43s]   breaking dependency coreutils -> glibc
+[   43s] cycle: glibc -> basesystem -> filesystem -> coreutils -> libacl
+[   43s]   breaking dependency coreutils -> libacl
+[   43s] cycle: glibc -> basesystem -> filesystem -> coreutils -> attr
+[   43s]   breaking dependency coreutils -> attr
+[   43s] cycle: coreutils -> libcap -> bash
+[   43s]   breaking dependency libcap -> bash
+[   43s] cycle: coreutils -> libcap
+[   43s]   breaking dependency coreutils -> libcap
+[   43s] cycle: glibc -> basesystem -> filesystem -> coreutils -> openssl-libs
+[   43s]   breaking dependency coreutils -> openssl-libs
+[   43s] cycle: glibc -> basesystem -> filesystem -> coreutils -> libselinux
+[   43s]   breaking dependency libselinux -> glibc
+[   43s] cycle: glibc -> basesystem -> filesystem -> coreutils -> libselinux -> pcre2
+[   43s]   breaking dependency glibc -> basesystem
+[   43s] cycle: glibc -> glibc-common -> bash -> coreutils -> libselinux -> pcre2
+[   43s]   breaking dependency glibc-common -> bash
+[   43s] cycle: glibc -> glibc-common -> coreutils -> libselinux -> pcre2
+[   43s]   breaking dependency glibc-common -> coreutils
+[   43s] cycle: glibc -> glibc-common
+[   43s]   breaking dependency glibc-common -> glibc
+[   43s] cycle: glibc -> glibc-common -> libselinux -> pcre2
+[   43s]   breaking dependency pcre2 -> glibc
+[   43s] cycle: glibc -> glibc-common -> libselinux -> pcre2 -> readline
+[   43s]   breaking dependency readline -> glibc
+[   43s] cycle: glibc -> glibc-common -> libselinux -> pcre2 -> readline -> ncurses-libs
+[   43s]   breaking dependency libselinux -> pcre2
+[   43s] cycle: libselinux -> libsepol -> bash -> coreutils
+[   43s]   breaking dependency bash -> coreutils
+[   43s] cycle: libselinux -> libsepol -> bash -> filesystem -> coreutils
+[   43s]   breaking dependency libsepol -> bash
+[   43s] cycle: libselinux -> libsepol -> coreutils
+[   43s]   breaking dependency libsepol -> coreutils
+[   43s] cycle: glibc -> glibc-common -> libselinux -> libsepol
+[   43s]   breaking dependency glibc -> glibc-common
+[   43s] cycle: glibc -> filesystem -> coreutils -> libselinux -> libsepol
+[   43s]   breaking dependency filesystem -> coreutils
+[   43s] cycle: filesystem -> setup -> openEuler-release -> bash
+[   43s]   breaking dependency filesystem -> setup
+[   43s] cycle: glibc -> filesystem -> ncurses-libs
+[   43s]   breaking dependency ncurses-libs -> glibc
+[   43s] cycle: openssl-libs -> crypto-policies -> python3
+[   43s]   breaking dependency python3 -> openssl-libs
+[   43s] cycle: crypto-policies -> python3 -> libnsl2 -> libtirpc -> krb5-libs
+[   43s]   breaking dependency python3 -> libnsl2
+[   43s] cycle: crypto-policies -> python3 -> libtirpc -> krb5-libs
+[   43s]   breaking dependency python3 -> libtirpc
+[   43s] cycle: pam -> libpwquality
+[   43s]   breaking dependency pam -> libpwquality
+[   43s] cycle: rpm -> rpm-libs
+[   43s]   breaking dependency rpm -> rpm-libs
+[   43s] cycle: perl-libs -> perl-Carp
+[   43s]   breaking dependency perl-libs -> perl-Carp
+[   43s] cycle: perl-libs -> perl-Exporter
+[   43s]   breaking dependency perl-libs -> perl-Exporter
+[   43s] cycle: perl-Carp -> perl-Exporter
+[   43s]   breaking dependency perl-Exporter -> perl-Carp
+[   43s] cycle: libxcrypt-devel -> glibc-devel
+[   43s]   breaking dependency glibc-devel -> libxcrypt-devel
+[   43s] cycle: cmake-data -> cmake
+[   43s]   breaking dependency cmake -> cmake-data
+[   43s] cycle: nss-util -> nss
+[   43s]   breaking dependency nss -> nss-util
+[   43s] cycle: nss-softokn -> nss-util -> nss
+[   43s]   breaking dependency nss -> nss-softokn
+[   43s] cycle: selinux-policy-targeted -> selinux-policy
+[   43s]   breaking dependency selinux-policy -> selinux-policy-targeted
+[   43s] cycle: perl-PathTools -> perl
+[   43s]   breaking dependency perl -> perl-PathTools
+[   43s] cycle: perl-File-Path -> perl-PathTools -> perl
+[   43s]   breaking dependency perl -> perl-File-Path
+[   43s] cycle: perl -> perl-constant
+[   43s]   breaking dependency perl -> perl-constant
+[   43s] cycle: perl-PathTools -> perl -> perl-File-Temp
+[   43s]   breaking dependency perl -> perl-File-Temp
+[   43s] done
+[   43s] querying package ids...
+[   53s] [1/182] installing cmake-filesystem-3.27.9-2.oe2403
+[   53s] [2/182] installing fuse-common-3.16.2-1.oe2403
+[   53s] [3/182] installing kernel-headers-6.6.0-12.0.0.8.oe2403
+[   55s] [4/182] installing ncurses-base-6.4-8.oe2403
+[   55s] [5/182] installing openEuler-gpg-keys-1.0-3.1.oe2309
+[   55s] [6/182] installing python-setuptools-69.1.0-1.oe2403
+[   56s] [7/182] installing qt5-srpm-macros-5.15.10-2.oe2309
+[   56s] [8/182] installing tzdata-2024a-1.oe2403
+[   57s] [9/182] installing openEuler-repos-1.0-3.1.oe2309
+[   57s] [10/182] installing ncurses-libs-6.4-8.oe2403
+[   58s] [11/182] installing readline-8.2-2.oe2403
+[   58s] [12/182] installing filesystem-3.16-5.oe2309
+[   59s] warning: group mail does not exist - using root
+[   59s] [13/182] installing emacs-filesystem-1:29.1-1.oe2403
+[   59s] [14/182] installing libgcc-12.3.1-17.oe2403
+[   60s] [15/182] installing pcre2-10.42-6.oe2403
+[   60s] [16/182] installing glibc-2.38-22.oe2403
+[   64s] [17/182] installing brotli-1.1.0-1.oe2403
+[   64s] [18/182] installing cpio-2.14-3.oe2403
+[   65s] [19/182] installing diffutils-3.10-2.oe2403
+[   65s] [20/182] installing expat-2.6.0-1.oe2403
+[   66s] [21/182] installing jansson-2.14-3.oe2403
+[   66s] [22/182] installing json-c-0.17-1.oe2403
+[   66s] [23/182] installing keyutils-libs-1.6.3-5.oe2403
+[   67s] [24/182] installing libatomic-12.3.1-17.oe2403
+[   67s] [25/182] installing libcap-ng-0.8.3-1.oe2403
+[   67s] [26/182] installing libev-4.33-3.oe2403
+[   68s] [27/182] installing libffi-3.4.4-3.oe2403
+[   68s] [28/182] installing libgomp-12.3.1-17.oe2403
+[   68s] [29/182] installing libgpg-error-1.47-1.oe2403
+[   69s] [30/182] installing libnghttp2-1.58.0-1.oe2403
+[   69s] [31/182] installing libsigsegv-2.14-1.oe2403
+[   69s] [32/182] installing libsmartcols-2.39.1-4.oe2403
+[   70s] [33/182] installing libtasn1-4.19.0-1.oe2403
+[   70s] [34/182] installing libtool-ltdl-2.4.7-3.oe2403
+[   70s] [35/182] installing libunistring-1.1-2.oe2403
+[   71s] [36/182] installing libuuid-2.39.1-4.oe2403
+[   71s] [37/182] installing libuv-1:1.47.0-2.oe2403
+[   72s] [38/182] installing libxcrypt-4.4.36-1.oe2403
+[   72s] [39/182] installing lz4-1.9.4-2.oe2403
+[   72s] [40/182] installing nspr-4.35.0-2.oe2403
+[   73s] [41/182] installing pkgconf-1.9.5-1.oe2403
+[   73s] [42/182] installing which-2.21-15.oe2403
+[   73s] [43/182] installing xz-libs-5.6.0-1.oe2403
+[   74s] [44/182] installing zlib-1.3.1-1.oe2403
+[   74s] [45/182] installing attr-2.5.1-4.oe2403
+[   74s] [46/182] installing libstdc++-12.3.1-17.oe2403
+[   75s] [47/182] installing gdbm-1:1.23-2.oe2403
+[   75s] [48/182] installing libsepol-3.5-2.oe2403
+[   76s] [49/182] installing bash-5.2.15-5.oe2403
+[   77s] [50/182] installing audit-libs-1:3.1.2-1.oe2403
+[   77s] [51/182] installing file-libs-5.45-1.oe2403
+[   79s] [52/182] installing gmp-1:6.3.0-2.oe2403
+[   79s] [53/182] installing libacl-2.3.1-1.oe2403
+[   79s] [54/182] installing libgcrypt-1.10.2-1.oe2403
+[   80s] [55/182] installing libpng-2:1.6.40-1.oe2403
+[   80s] [56/182] installing p11-kit-0.25.0-2.oe2403
+[   81s] [57/182] installing zlib-devel-1.3.1-1.oe2403
+[   81s] [58/182] installing cyrus-sasl-lib-2.1.28-2.oe2403
+[   82s] [59/182] installing fuse-2.9.9-11.oe2403
+[   82s] [60/182] installing gc-8.2.4-1.oe2403
+[   82s] [61/182] installing libdb-5.3.28-41.oe2403
+[   84s] [62/182] installing libselinux-3.5-2.oe2403
+[   84s] [63/182] installing libxml2-2.11.5-2.oe2403
+[   85s] [64/182] installing zstd-1.5.5-1.oe2403
+[   86s] [65/182] installing pcre-8.45-5.oe2403
+[   86s] [66/182] installing perl-libs-4:5.38.0-5.oe2403
+[   88s] [67/182] installing ncurses-6.4-8.oe2403
+[   89s] [68/182] installing perl-parent-1:0.241-1.oe2403
+[   89s] [69/182] installing isl-0.24-2.oe2403
+[   90s] [70/182] installing mpfr-4.2.1-1.oe2403
+[   90s] [71/182] installing perl-Exporter-5.77-1.oe2403
+[   91s] [72/182] installing file-5.45-1.oe2403
+[   91s] [73/182] installing libpng-devel-2:1.6.40-1.oe2403
+[   91s] [74/182] installing patch-2.7.6-20.oe2403
+[   92s] [75/182] installing sed-4.9-3.oe2403
+[   92s] [76/182] installing glibc-common-2.38-22.oe2403
+[   95s] [77/182] installing coreutils-9.4-2.oe2403
+[   97s] [78/182] installing crontabs-1.11-23.oe2309
+[   98s] [79/182] installing elfutils-default-yama-scope-0.190-2.oe2403
+[   98s] [80/182] installing perl-Carp-1.50-419.oe2403
+[   99s] [81/182] installing publicsuffix-list-20240108-1.oe2403
+[   99s] [82/182] installing bzip2-1.0.8-6.oe2403
+[  100s] [83/182] installing gzip-1.12-4.oe2403
+[  100s] [84/182] installing libmpc-1.3.1-1.oe2403
+[  100s] [85/182] installing perl-Digest-MD5-2.58-2.oe2403
+[  101s] [86/182] installing popt-1.19-2.oe2403
+[  102s] [87/182] installing grep-3.11-1.oe2403
+[  102s] [88/182] installing info-7.0.3-3.oe2403
+[  103s] [89/182] installing libblkid-2.39.1-4.oe2403
+[  104s] [90/182] installing libidn2-2.3.4-1.oe2403
+[  104s] [91/182] installing slang-2.3.3-2.oe2403
+[  105s] [92/182] installing tar-2:1.35-2.oe2403
+[  106s] [93/182] installing tcl-1:8.6.14-1.oe2403
+[  107s] [94/182] installing jsoncpp-1.9.5-3.oe2403
+[  108s] [95/182] installing lua-5.4.6-1.oe2403
+[  108s] [96/182] installing glibc-devel-2.38-22.oe2403
+[  112s] [97/182] installing gawk-5.2.2-1.oe2403
+[  112s] [98/182] installing guile-5:2.2.7-4.oe2403
+[  117s] [99/182] installing zip-3.0-32.oe2403
+[  118s] [100/182] installing libfdisk-2.39.1-4.oe2403
+[  118s] [101/182] installing libxcrypt-devel-4.4.36-1.oe2403
+[  119s] [102/182] installing newt-0.52.23-1.oe2403
+[  120s] [103/182] installing bc-1.07.1-12.oe2403
+[  120s] [104/182] installing libmount-2.39.1-4.oe2403
+[  121s] [105/182] installing unzip-6.0-51.oe2403
+[  121s] [106/182] installing cracklib-2.9.11-1.oe2403
+[  123s] [107/182] installing e2fsprogs-1.47.0-2.oe2403
+[  124s] [108/182] installing elfutils-libelf-0.190-2.oe2403
+[  125s] [109/182] installing findutils-2:4.9.0-1.oe2403
+[  125s] [110/182] installing libsemanage-3.5-1.oe2403
+[  126s] [111/182] installing sqlite-3.42.0-1.oe2403
+[  127s] [112/182] installing xz-5.6.0-1.oe2403
+[  128s] [113/182] installing libpsl-0.21.2-1.oe2403
+[  128s] [114/182] installing logrotate-3.21.0-1.oe2403
+[  129s] [115/182] installing make-1:4.4.1-1.oe2403
+[  129s] [116/182] installing perl-Scalar-List-Utils-4:1.63-1.oe2403
+[  130s] [117/182] installing cpp-12.3.1-17.oe2403
+[  134s] [118/182] installing dwz-0.15-1.oe2403
+[  134s] [119/182] installing openEuler-release-20.03LTS-53.oe2403
+[  135s] [120/182] installing chkconfig-1.25-1.oe2403
+[  135s] [121/182] installing elfutils-libs-0.190-2.oe2403
+[  136s] [122/182] installing glib2-2.78.3-1.oe2403
+[  138s] [123/182] installing setup-2.14.5-1.oe2403
+[  139s] [124/182] installing binutils-2.41-3.oe2403
+[  142s] [125/182] installing elfutils-0.190-2.oe2403
+[  143s] [126/182] installing p11-kit-trust-0.25.0-2.oe2403
+[  143s] [127/182] installing babeltrace-1.5.11-1.oe2403
+[  144s] [128/182] installing basesystem-12-3.oe2309
+[  144s] [129/182] installing ca-certificates-2023.2.64-1.oe2403
+[  153s] [130/182] installing gcc-12.3.1-17.oe2403
+[  163s] [131/182] installing python-pip-wheel-23.3.1-1.oe2403
+[  163s] [132/182] installing python3-3.11.6-2.oe2403
+[  170s] [133/182] installing crypto-policies-20230614-1.git5f3458e.oe2403
+[  173s] [134/182] installing gdb-headless-14.1-1.oe2403
+[  175s] [135/182] installing compat-openssl11-libs-1:1.1.1m-9.oe2403
+[  176s] [136/182] installing openssl-libs-1:3.0.12-3.oe2403
+[  177s] [137/182] installing nss-3.94.0-4.oe2403
+[  180s] [138/182] installing debugedit-5.0-6.oe2403
+[  181s] [139/182] installing libevent-2.1.12-9.oe2403
+[  181s] [140/182] installing openldap-2.6.5-4.oe2403
+[  182s] [141/182] installing fipscheck-1.5.0-10.oe2403
+[  182s] [142/182] installing nss-util-3.94.0-4.oe2403
+[  183s] [143/182] installing openssl-1:3.0.12-3.oe2403
+[  184s] [144/182] installing libarchive-3.7.1-1.oe2403
+[  184s] [145/182] installing libverto-0.3.2-3.oe2403
+[  185s] [146/182] installing nss-softokn-3.94.0-4.oe2403
+[  185s] [147/182] installing krb5-libs-1.21.2-1.oe2403
+[  186s] [148/182] installing libtirpc-1.3.4-1.oe2403
+[  187s] [149/182] installing libssh-0.10.5-2.oe2403
+[  187s] [150/182] installing libnsl2-2.0.1-1.oe2403
+[  188s] [151/182] installing libcurl-8.4.0-1.oe2403
+[  188s] [152/182] installing curl-8.4.0-1.oe2403
+[  189s] [153/182] installing tpm2-tss-4.0.1-1.oe2403
+[  190s] [154/182] installing pam-1.5.3-2.oe2403
+[  191s] [155/182] installing ima-evm-utils-libs-1.5-1.oe2403
+[  191s] [156/182] installing libpwquality-1.4.5-1.oe2403
+[  192s] [157/182] installing libcap-2.69-1.oe2403
+[  192s] [158/182] installing shadow-subid-devel-2:4.14.3-1.oe2403
+[  193s] [159/182] installing systemd-libs-255-5.oe2403
+[  194s] Detected system with incompatible nobody defined, creating /etc/systemd/dont-synthesize-nobody
+[  194s] [160/182] installing shadow-2:4.14.3-1.oe2403
+[  194s] [161/182] installing rpm-4.18.2-3.oe2403
+[  195s] [162/182] installing efi-srpm-macros-4-9.oe2403
+[  196s] [163/182] installing cmake-rpm-macros-3.27.9-2.oe2403
+[  196s] [164/182] installing dbus-libs-1:1.14.8-2.oe2403
+[  197s] [165/182] installing libutempter-1.2.1-3.oe2403
+[  198s] [166/182] installing rpm-libs-4.18.2-3.oe2403
+[  199s] [167/182] installing digest-list-tools-0.3.95-14.oe2403
+[  200s] [168/182] installing openEuler-rpm-config-30-50.oe2309
+[  200s] [169/182] installing cmake-3.27.9-2.oe2403
+[  209s] [170/182] installing util-linux-2.39.1-4.oe2403
+[  211s] [171/182] installing cmake-data-3.27.9-2.oe2403
+[  214s] [172/182] installing perl-4:5.38.0-5.oe2403
+[  216s] [173/182] installing policycoreutils-3.5-1.oe2403
+[  217s] [174/182] installing rpm-build-4.18.2-3.oe2403
+[  218s] [175/182] installing perl-constant-1.33-422.oe2403
+[  218s] [176/182] installing pesign-obs-integration-10.1-4.oe2403
+[  219s] [177/182] installing selinux-policy-40.7-1.oe2403
+[  220s] [178/182] installing gcc_secure-1.0-0.12.oe2403
+[  221s] [179/182] installing selinux-policy-targeted-40.7-1.oe2403
+[  225s] [180/182] installing perl-PathTools-3.89-1.oe2403
+[  226s] [181/182] installing perl-File-Path-2.18-2.oe2403
+[  226s] [182/182] installing perl-File-Temp-1:0.2311-3.oe2403
+[  227s] now finalizing build dir...
+[  232s] -----------------------------------------------------------------
+[  232s] I have the following modifications for slang.spec:
+[  232s] 5c5
+[  232s] < Release:	2
+[  232s] ---
+[  232s] > Release:	5.1
+[  235s] -----------------------------------------------------------------
+[  235s] ----- building slang.spec (user abuild)
+[  235s] -----------------------------------------------------------------
+[  235s] -----------------------------------------------------------------
+[  236s] + exec rpmbuild -ba --define '_srcdefattr (-,root,root)' --nosignature --undefine _enable_debug_packages --define 'disturl obs://rvpt-obs-main/openEuler:24.03:fix/standard/9c42d5fe6ddece6083fcd40316dbfec5-slang' /home/abuild/rpmbuild/SOURCES/slang.spec
+[  237s] Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.vfiYNQ
+[  237s] + umask 022
+[  237s] + cd /home/abuild/rpmbuild/BUILD
+[  237s] + cd /home/abuild/rpmbuild/BUILD
+[  237s] + rm -rf slang-2.3.3
+[  237s] + /usr/lib/rpm/rpmuncompress -x /home/abuild/rpmbuild/SOURCES/slang-2.3.3.tar.bz2
+[  238s] + STATUS=0
+[  238s] + '[' 0 -ne 0 ']'
+[  238s] + cd slang-2.3.3
+[  238s] + /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
+[  238s] + /usr/lib/rpm/rpmuncompress /home/abuild/rpmbuild/SOURCES/slang-sighuptest.patch
+[  238s] + /usr/bin/patch -p1 -s --fuzz=0 --no-backup-if-mismatch -f
+[  238s] + sed -i '/^INSTALL_MODULE=/s/_DATA//' configure
+[  238s] + RPM_EC=0
+[  238s] ++ jobs -p
+[  238s] + exit 0
+[  238s] Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.A4olsp
+[  238s] + umask 022
+[  238s] + cd /home/abuild/rpmbuild/BUILD
+[  238s] + cd slang-2.3.3
+[  238s] + CFLAGS='-O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection'
+[  238s] + export CFLAGS
+[  238s] + CXXFLAGS='-O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection -fexceptions'
+[  238s] + export CXXFLAGS
+[  238s] + FFLAGS='-O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection -fexceptions -I/usr/lib64/gfortran/modules'
+[  238s] + export FFLAGS
+[  238s] + FCFLAGS='-O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection -fexceptions -I/usr/lib64/gfortran/modules'
+[  238s] + export FCFLAGS
+[  238s] + LDFLAGS='-Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld'
+[  238s] + export LDFLAGS
+[  238s] + '[' 1 = 1 ']'
+[  238s] +++ dirname ./configure
+[  238s] ++ find . -name config.guess -o -name config.sub
+[  238s] + for i in $(find $(dirname ./configure) -name config.guess -o -name config.sub)
+[  238s] ++ basename ./autoconf/config.sub
+[  238s] + '[' -f /usr/lib/rpm/openEuler/config.sub ']'
+[  238s] + /usr/bin/rm -f ./autoconf/config.sub
+[  238s] ++ basename ./autoconf/config.sub
+[  238s] + /usr/bin/cp -fv /usr/lib/rpm/openEuler/config.sub ./autoconf/config.sub
+[  238s] '/usr/lib/rpm/openEuler/config.sub' -> './autoconf/config.sub'
+[  238s] + for i in $(find $(dirname ./configure) -name config.guess -o -name config.sub)
+[  238s] ++ basename ./autoconf/config.guess
+[  238s] + '[' -f /usr/lib/rpm/openEuler/config.guess ']'
+[  238s] + /usr/bin/rm -f ./autoconf/config.guess
+[  238s] ++ basename ./autoconf/config.guess
+[  238s] + /usr/bin/cp -fv /usr/lib/rpm/openEuler/config.guess ./autoconf/config.guess
+[  239s] '/usr/lib/rpm/openEuler/config.guess' -> './autoconf/config.guess'
+[  239s] + '[' 1 = 1 ']'
+[  239s] + '[' x '!=' 'x-Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld' ']'
+[  239s] ++ find . -name ltmain.sh
+[  239s] + ./configure --build=riscv64-openEuler-linux-gnu --host=riscv64-openEuler-linux-gnu --program-prefix= --disable-dependency-tracking --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib64 --libexecdir=/usr/libexec --localstatedir=/var --sharedstatedir=/var/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-pnglib=/usr/lib64 --with-zlib=/usr/lib64 --with-pnginc=/usr/include --with-zinc=/usr/include --without-pcre
+[  241s] configure: WARNING: unrecognized options: --disable-dependency-tracking
+[  242s] checking build system type... riscv64-openEuler-linux-gnu
+[  243s] checking host system type... riscv64-openEuler-linux-gnu
+[  243s] checking for riscv64-openEuler-linux-gnu-gcc... no
+[  243s] checking for gcc... gcc
+[  246s] checking whether the C compiler works... yes
+[  246s] checking for C compiler default output file name... a.out
+[  247s] checking for suffix of executables... 
+[  249s] checking whether we are cross compiling... no
+[  250s] checking for suffix of object files... o
+[  251s] checking whether we are using the GNU C compiler... yes
+[  251s] checking whether gcc accepts -g... yes
+[  253s] checking for gcc option to accept ISO C89... none needed
+[  254s] checking how to run the C preprocessor... gcc -E
+[  256s] checking for grep that handles long lines and -e... /usr/bin/grep
+[  256s] checking for egrep... /usr/bin/grep -E
+[  260s] checking for ANSI C header files... yes
+[  261s] checking for sys/types.h... yes
+[  262s] checking for sys/stat.h... yes
+[  263s] checking for stdlib.h... yes
+[  264s] checking for string.h... yes
+[  265s] checking for memory.h... yes
+[  266s] checking for strings.h... yes
+[  267s] checking for inttypes.h... yes
+[  268s] checking for stdint.h... yes
+[  269s] checking for unistd.h... yes
+[  270s] checking minix/config.h usability... no
+[  271s] checking minix/config.h presence... no
+[  271s] checking for minix/config.h... no
+[  272s] checking whether it is safe to define __EXTENSIONS__... yes
+[  273s] checking whether gcc needs -traditional... no
+[  275s] checking C compiler that understands ANSI prototypes... gcc looks ok.  Good.
+[  275s] checking whether make sets $(MAKE)... yes
+[  275s] checking for riscv64-openEuler-linux-gnu-ranlib... no
+[  275s] checking for ranlib... ranlib
+[  275s] checking for a BSD-compatible install... /usr/bin/install -c
+[  275s] checking terminfo layout... default
+[  275s] checking type of readline support for slsh... slang
+[  275s] checking for slsyswrap... no
+[  277s] checking for X... no
+[  277s] checking for stdlib.h... (cached) yes
+[  277s] checking for unistd.h... (cached) yes
+[  277s] checking for memory.h... (cached) yes
+[  278s] checking termios.h usability... yes
+[  279s] checking termios.h presence... yes
+[  279s] checking for termios.h... yes
+[  280s] checking malloc.h usability... yes
+[  281s] checking malloc.h presence... yes
+[  281s] checking for malloc.h... yes
+[  282s] checking locale.h usability... yes
+[  282s] checking locale.h presence... yes
+[  282s] checking for locale.h... yes
+[  284s] checking xlocale.h usability... no
+[  284s] checking xlocale.h presence... no
+[  284s] checking for xlocale.h... no
+[  285s] checking langinfo.h usability... yes
+[  286s] checking langinfo.h presence... yes
+[  286s] checking for langinfo.h... yes
+[  287s] checking fcntl.h usability... yes
+[  288s] checking fcntl.h presence... yes
+[  288s] checking for fcntl.h... yes
+[  289s] checking sys/fcntl.h usability... yes
+[  289s] checking sys/fcntl.h presence... yes
+[  289s] checking for sys/fcntl.h... yes
+[  290s] checking for sys/types.h... (cached) yes
+[  291s] checking sys/wait.h usability... yes
+[  291s] checking sys/wait.h presence... yes
+[  291s] checking for sys/wait.h... yes
+[  292s] checking sys/utsname.h usability... yes
+[  293s] checking sys/utsname.h presence... yes
+[  293s] checking for sys/utsname.h... yes
+[  294s] checking sys/times.h usability... yes
+[  295s] checking sys/times.h presence... yes
+[  295s] checking for sys/times.h... yes
+[  296s] checking sys/statvfs.h usability... yes
+[  296s] checking sys/statvfs.h presence... yes
+[  296s] checking for sys/statvfs.h... yes
+[  298s] checking sys/time.h usability... yes
+[  298s] checking sys/time.h presence... yes
+[  298s] checking for sys/time.h... yes
+[  299s] checking utime.h usability... yes
+[  300s] checking utime.h presence... yes
+[  300s] checking for utime.h... yes
+[  301s] checking floatingpoint.h usability... no
+[  302s] checking floatingpoint.h presence... no
+[  302s] checking for floatingpoint.h... no
+[  303s] checking ieeefp.h usability... no
+[  304s] checking ieeefp.h presence... no
+[  304s] checking for ieeefp.h... no
+[  305s] checking nan.h usability... no
+[  306s] checking nan.h presence... no
+[  306s] checking for nan.h... no
+[  307s] checking fenv.h usability... yes
+[  307s] checking fenv.h presence... yes
+[  307s] checking for fenv.h... yes
+[  308s] checking sys/mman.h usability... yes
+[  309s] checking sys/mman.h presence... yes
+[  309s] checking for sys/mman.h... yes
+[  310s] checking sys/socket.h usability... yes
+[  311s] checking sys/socket.h presence... yes
+[  311s] checking for sys/socket.h... yes
+[  312s] checking netinet/in.h usability... yes
+[  312s] checking netinet/in.h presence... yes
+[  312s] checking for netinet/in.h... yes
+[  314s] checking arpa/inet.h usability... yes
+[  314s] checking arpa/inet.h presence... yes
+[  314s] checking for arpa/inet.h... yes
+[  315s] checking sys/un.h usability... yes
+[  316s] checking sys/un.h presence... yes
+[  316s] checking for sys/un.h... yes
+[  317s] checking sys/resource.h usability... yes
+[  318s] checking sys/resource.h presence... yes
+[  318s] checking for sys/resource.h... yes
+[  320s] checking for mode_t... yes
+[  322s] checking for pid_t... yes
+[  323s] checking for uid_t in sys/types.h... yes
+[  323s] checking for socklen_t... yes
+[  324s] checking for dirent.h that defines DIR... yes
+[  326s] checking for library containing opendir... none required
+[  327s] checking for memset... yes
+[  329s] checking for memcpy... yes
+[  330s] checking for putenv... yes
+[  332s] checking for getcwd... yes
+[  333s] checking for setlocale... yes
+[  334s] checking for tcgetattr... yes
+[  336s] checking for tcsetattr... yes
+[  337s] checking for cfgetospeed... yes
+[  338s] checking for sigaction... yes
+[  340s] checking for sigemptyset... yes
+[  341s] checking for sigprocmask... yes
+[  343s] checking for sigaddset... yes
+[  344s] checking for alarm... yes
+[  345s] checking for pause... yes
+[  347s] checking for vfscanf... yes
+[  348s] checking for lstat... yes
+[  350s] checking for readlink... yes
+[  351s] checking for symlink... yes
+[  353s] checking for link... yes
+[  354s] checking for kill... yes
+[  355s] checking for killpg... yes
+[  357s] checking for snprintf... yes
+[  358s] checking for vsnprintf... yes
+[  360s] checking for getppid... yes
+[  361s] checking for getegid... yes
+[  363s] checking for geteuid... yes
+[  364s] checking for getuid... yes
+[  365s] checking for getgid... yes
+[  367s] checking for setgid... yes
+[  368s] checking for setuid... yes
+[  370s] checking for setpgid... yes
+[  371s] checking for getpgid... yes
+[  372s] checking for setpgrp... yes
+[  374s] checking for getpgrp... yes
+[  375s] checking for setsid... yes
+[  377s] checking for getsid... yes
+[  378s] checking for mmap... yes
+[  379s] checking for chown... yes
+[  381s] checking for lchown... yes
+[  382s] checking for popen... yes
+[  384s] checking for mkfifo... yes
+[  385s] checking for atexit... yes
+[  386s] checking for on_exit... yes
+[  388s] checking for umask... yes
+[  389s] checking for uname... yes
+[  391s] checking for times... yes
+[  392s] checking for gmtime... yes
+[  393s] checking for mktime... yes
+[  395s] checking for gettimeofday... yes
+[  396s] checking for getitimer... yes
+[  398s] checking for setitimer... yes
+[  399s] checking for gmtime_r... yes
+[  400s] checking for ctime_r... yes
+[  402s] checking for localtime_r... yes
+[  403s] checking for strtod... yes
+[  405s] checking for atoll... yes
+[  406s] checking for strtoll... yes
+[  408s] checking for issetugid... no
+[  409s] checking for isnan... yes
+[  410s] checking for finite... yes
+[  412s] checking for isinf... yes
+[  414s] checking for round... no
+[  415s] checking for siglongjmp... yes
+[  416s] checking for fork... yes
+[  418s] checking for waitpid... yes
+[  419s] checking for socket... yes
+[  420s] checking for socketpair... yes
+[  422s] checking for confstr... yes
+[  423s] checking for pathconf... yes
+[  425s] checking for getpriority... yes
+[  426s] checking for setpriority... yes
+[  427s] checking for getrusage... yes
+[  429s] checking for setvbuf... yes
+[  430s] checking for utime... yes
+[  432s] checking for utimes... yes
+[  433s] checking for ttyname... yes
+[  434s] checking for ttyname_r... yes
+[  436s] checking for newlocale... yes
+[  437s] checking for strtod_l... yes
+[  439s] checking for localeconv... yes
+[  440s] checking for statvfs... yes
+[  441s] checking for flock... yes
+[  443s] checking for nl_langinfo and CODESET... yes
+[  444s] checking for environ variable... yes
+[  446s] checking for acosh in -lm... yes
+[  447s] checking for asinh in -lm... yes
+[  448s] checking for atanh in -lm... yes
+[  450s] checking for hypot in -lm... yes
+[  451s] checking for atan2 in -lm... yes
+[  453s] checking for frexp in -lm... yes
+[  454s] checking for frexpf in -lm... yes
+[  455s] checking for ldexp in -lm... yes
+[  457s] checking for ldexpf in -lm... yes
+[  458s] checking for sincos in -lm... yes
+[  459s] checking for sincosf in -lm... yes
+[  461s] checking for feclearexcept in -lm... yes
+[  462s] checking for fpsetsticky in -lm... no
+[  463s] checking dlfcn.h usability... yes
+[  464s] checking dlfcn.h presence... yes
+[  464s] checking for dlfcn.h... yes
+[  465s] checking for dlopen in -ldl... yes
+[  467s] checking size of short... 2
+[  468s] checking size of int... 4
+[  470s] checking size of long... 8
+[  472s] checking size of float... 4
+[  474s] checking size of double... 8
+[  476s] checking for ptrdiff_t... yes
+[  479s] checking for size_t... yes
+[  480s] checking size of size_t... 8
+[  483s] checking for long long... yes
+[  484s] checking size of long long... 8
+[  484s] checking for special C compiler options needed for large files... no
+[  485s] checking for _FILE_OFFSET_BITS value needed for large files... no
+[  487s] checking for _LARGEFILE_SOURCE value needed for large files... no
+[  489s] checking for off_t... yes
+[  491s] checking size of off_t... 8
+[  491s] checking for ncurses5-config... no
+[  491s] checking for ncursesw5-config... (cached) no
+[  491s] checking for terminfo... yes
+[  491s] checking for the pcre library and header files ... no
+[  492s] checking for the onig library and header files oniguruma.h... no
+[  492s] checking for the png library and header files ... yes: /usr/lib64 and /usr/include
+[  492s] checking for the z library and header files zlib.h... yes: /usr/lib64 and /usr/include
+[  494s] checking for the iconv library and header files ... no
+[  495s] checking for iconv... yes
+[  496s] checking for iconv declaration... 
+[  496s]          extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+[  497s] checking for sysconf... yes
+[  498s] checking SLANG_VERSION... 2.3.3
+[  498s] configure: creating ./config.status
+[  501s] config.status: creating Makefile
+[  501s] config.status: creating src/Makefile
+[  501s] config.status: creating slsh/Makefile
+[  502s] config.status: creating modules/Makefile
+[  502s] config.status: creating demo/Makefile
+[  503s] config.status: creating slang.pc
+[  503s] config.status: creating src/sysconf.h
+[  503s] configure: WARNING: unrecognized options: --disable-dependency-tracking
+[  503s] 
+[  503s] Configuration complete.  You may need to edit src/Makefile.
+[  503s] You are compiling SLANG with the following compiler configuration:
+[  503s]        CC = gcc
+[  503s]    CFLAGS = -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection 
+[  503s]   LDFLAGS = -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld -Wl,-export-dynamic
+[  503s] 
+[  503s]    ELF_CC = $(CC)
+[  503s]  ELF_LINK = $(CC) $(LDFLAGS) -shared -Wl,-O1 -Wl,--version-script,$(VERSION_SCRIPT) -Wl,-soname,$(ELFLIB_MAJOR)
+[  503s] ELF_CFLAGS= $(CFLAGS) $(CPPFLAGS) -fPIC 
+[  503s] 
+[  503s]                   prefix: /usr
+[  503s]              exec_prefix: /usr
+[  503s]     Installation Lib Dir: /usr/lib64
+[  503s] Installation Include Dir: /usr/include
+[  503s] 
+[  503s] See also src/sl-feat.h for various features.
+[  503s] 
+[  503s] The following modules that depend upon external libraries will be built:
+[  503s]    png z iconv
+[  503s] 
+[  503s] 
+[  503s] While not required, it is recommended that you install the following
+[  503s] libraries and reconfigure so that the corresponding modules can be built:
+[  503s]    pcre oniguruma
+[  503s] 
+[  503s] Type 'make' to build a shared version of the library.
+[  503s] Type 'make help' for more options
+[  503s] 
+[  504s] + make RPATH= install_doc_dir=/usr/share/doc/slang all
+[  504s] cd src; /usr/bin/make elf
+[  504s] make[1]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/src'
+[  504s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs
+[  504s] mkdir -p -- /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs
+[  504s] touch /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs/tstamp
+[  504s] cp sysconf.h config.h
+[  504s] cp terminfo/default.inc terminfo.inc
+[  504s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG  -DMISC_TERMINFO_DIRS='""' /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltermin.c
+[  506s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltermin.c: In function 'try_open_tidir':
+[  506s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltermin.c:436:31: warning: '%s' directive writing up to 1018 bytes into a region of size between 3 and 1021 [-Wformat-overflow=]
+[  506s]   436 |         sprintf (file, "%s/%c/%s", tidir, *term, term);
+[  506s]       |                               ^~
+[  506s] In file included from /usr/include/stdio.h:964,
+[  506s]                  from /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slinclud.h:8,
+[  506s]                  from /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltermin.c:26:
+[  506s] In function 'sprintf',
+[  506s]     inlined from 'try_open_tidir' at /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltermin.c:436:2:
+[  506s] /usr/include/bits/stdio2.h:30:10: note: '__builtin___sprintf_chk' output between 4 and 2040 bytes into a destination of size 1024
+[  506s]    30 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+[  506s]       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[  506s]    31 |                                   __glibc_objsize (__s), __fmt,
+[  506s]       |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[  506s]    32 |                                   __va_arg_pack ());
+[  506s]       |                                   ~~~~~~~~~~~~~~~~~
+[  508s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sldisply.c
+[  517s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slutty.c
+[  520s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c
+[  536s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c: In function 'inner_interp':
+[  536s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:5827:23: warning: 'test' may be used uninitialized [-Wmaybe-uninitialized]
+[  536s]  5826 |                   if ((0 == pop_int (&test))
+[  536s]       |                       ~~~~~~~~~~~~~~~~~~~~~~
+[  536s]  5827 |                       && (test == 0))
+[  536s]       |                       ^~~~~~~~~~~~~~
+[  536s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:5825:23: note: 'test' was declared here
+[  536s]  5825 |                   int test;
+[  536s]       |                       ^~~~
+[  539s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c: In function 'lang_do_loops':
+[  539s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:3814:10: warning: 'blks' may be used uninitialized [-Wmaybe-uninitialized]
+[  539s]  3814 |    block = blks[0];
+[  539s]       |    ~~~~~~^~~~~~~~~
+[  539s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:3790:18: note: 'blks' declared here
+[  539s]  3790 |    SLBlock_Type *blks[4];
+[  539s]       |                  ^~~~
+[  539s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:4013:21: warning: 'first' may be used uninitialized [-Wmaybe-uninitialized]
+[  539s]  4013 |                   i += ctrl;
+[  539s]       |                   ~~^~~~~~~
+[  539s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:3789:8: note: 'first' was declared here
+[  539s]  3789 |    int first, last;
+[  539s]       |        ^~~~~
+[  539s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:3989:27: warning: 'last' may be used uninitialized [-Wmaybe-uninitialized]
+[  539s]  3989 |                        if (i > last) break;
+[  539s]       |                           ^
+[  539s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:3789:15: note: 'last' was declared here
+[  539s]  3789 |    int first, last;
+[  539s]       |               ^~~~
+[  544s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slarray.c
+[  559s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slclass.c
+[  564s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slcmd.c
+[  567s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slerr.c
+[  570s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slgetkey.c
+[  572s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slkeymap.c
+[  573s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slkeymap.c: In function 'find_the_key':
+[  573s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slkeymap.c:338:40: warning: the comparison will always evaluate as 'true' for the address of 'str' will never be NULL [-Waddress]
+[  573s]   338 |         if ((key != NULL) && (key->str != NULL))
+[  573s]       |                                        ^~
+[  573s] In file included from /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slkeymap.c:29:
+[  573s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.h:1531:18: note: 'str' declared here
+[  573s]  1531 |    unsigned char str[SLANG_MAX_KEYMAP_KEY_SEQ + 1];/* key sequence */
+[  573s]       |                  ^~~
+[  575s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slmalloc.c
+[  577s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slmath.c
+[  584s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slmemchr.c
+[  586s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slmemcmp.c
+[  588s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slmemcpy.c
+[  589s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slmemset.c
+[  591s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slmisc.c
+[  594s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slparse.c
+[  602s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slprepr.c
+[  605s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slregexp.c
+[  610s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slrline.c
+[  616s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slsearch.c
+[  619s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slsmg.c
+[  628s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG  -DSLANG_DOC_DIR='"/usr/share/doc/slang"' -DSLANG_INSTALL_PREFIX='"/usr"' /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slstd.c
+[  632s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltoken.c
+[  638s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltypes.c
+[  642s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slxstrng.c
+[  644s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slcurses.c
+[  649s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slscroll.c
+[  651s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slsignal.c
+[  653s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slkeypad.c
+[  655s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slerrno.c
+[  657s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slstring.c
+[  660s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slstruct.c
+[  667s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slcmplex.c
+[  672s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slarrfun.c
+[  688s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG  -DMODULE_INSTALL_DIR='"/usr/lib64/slang/v2/modules"' -DMODULE_PATH_ENV_NAME='"SLANG_MODULE_PATH"' /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slimport.c
+[  690s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slpath.c
+[  692s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slarith.c
+[  873s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slassoc.c
+[  877s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slcompat.c
+[  878s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slposdir.c
+[  882s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slstdio.c
+[  886s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slproc.c
+[  888s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltime.c
+[  891s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slstrops.c
+[  899s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slbstr.c
+[  903s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slpack.c
+[  906s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slintall.c
+[  908s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slistruc.c
+[  910s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slposio.c
+[  914s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slnspace.c
+[  916s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slarrmis.c
+[  918s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slospath.c
+[  920s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slscanf.c
+[  923s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sllower.c
+[  925s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slupper.c
+[  927s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slischar.c
+[  929s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slutf8.c
+[  933s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slwcwidth.c
+[  934s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slwclut.c
+[  939s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slcommon.c
+[  941s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sllist.c
+[  945s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slexcept.c
+[  948s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slfpu.c
+[  949s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slsig.c
+[  952s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -fPIC  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slboseos.c
+[  955s] rm -f /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs/libslang.so.2.3.3
+[  955s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && gcc -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld -shared -Wl,-O1 -Wl,--version-script,/home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.ver -Wl,-soname,libslang.so.2 -o libslang.so.2.3.3 sltermin.o sldisply.o slutty.o slang.o slarray.o slclass.o slcmd.o slerr.o slgetkey.o slkeymap.o slmalloc.o slmath.o slmemchr.o slmemcmp.o slmemcpy.o slmemset.o slmisc.o slparse.o slprepr.o slregexp.o slrline.o slsearch.o slsmg.o slstd.o sltoken.o sltypes.o slxstrng.o slcurses.o slscroll.o slsignal.o slkeypad.o slerrno.o slstring.o slstruct.o slcmplex.o slarrfun.o slimport.o slpath.o slarith.o slassoc.o slcompat.o slposdir.o slstdio.o slproc.o sltime.o slstrops.o slbstr.o slpack.o slintall.o slistruc.o slposio.o slnspace.o slarrmis.o slospath.o slscanf.o sllower.o slupper.o slischar.o slutf8.o slwcwidth.o slwclut.o slcommon.o sllist.o slexcept.o slfpu.o slsig.o slboseos.o -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld -ldl -lm -lc
+[  957s] if [ libslang.so.2 != libslang.so.2.3.3 ]; then \
+[  957s]   cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && rm -f libslang.so.2 && /bin/ln -sf libslang.so.2.3.3 libslang.so.2; \
+[  957s] fi
+[  958s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs && rm -f libslang.so && /bin/ln -sf libslang.so.2.3.3 libslang.so
+[  958s] 
+[  958s] libslang.so.2.3.3 created in /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs.
+[  958s] The link libslang.so to libslang.so.2.3.3 was also created.
+[  958s] 
+[  958s] make[1]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/src'
+[  958s] cd slsh; /usr/bin/make all
+[  958s] make[1]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/slsh'
+[  958s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh objs
+[  958s] mkdir -p -- objs
+[  958s] touch objs/tstamp
+[  958s] cp ../src/config.h .
+[  958s] cd objs && gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -c -DSLSH_CONF_DIR='"/etc"' -DSLSH_PATH='"/usr/share/slsh"' -DSLSH_CONF_DIR_ENV='"SLSH_CONF_DIR"' -DSLSH_LIB_DIR_ENV='"SLSH_LIB_DIR"' -DSLSH_PATH_ENV='"SLSH_PATH"'  /home/abuild/rpmbuild/BUILD/slang-2.3.3/slsh/slsh.c
+[  961s] cd objs && gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -c -DSLSH_CONF_DIR='"/etc"' -DSLSH_PATH='"/usr/share/slsh"' -DSLSH_CONF_DIR_ENV='"SLSH_CONF_DIR"' -DSLSH_LIB_DIR_ENV='"SLSH_LIB_DIR"' -DSLSH_PATH_ENV='"SLSH_PATH"'  -DUSE_GNU_READLINE=0 /home/abuild/rpmbuild/BUILD/slang-2.3.3/slsh/readline.c
+[  964s] gcc objs/slsh.o objs/readline.o -o objs/slsh_exe -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld -Wl,-export-dynamic -L/home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs -lslang  -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld  -ldl  -lm
+[  965s] make[1]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/slsh'
+[  965s] cd modules; /usr/bin/make all
+[  965s] make[1]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules'
+[  965s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh objs
+[  965s] mkdir -p -- objs
+[  965s] touch objs/tstamp
+[  965s] cp Makefile objs
+[  965s] cd objs && /usr/bin/make slsmg-module.so termios-module.so select-module.so fcntl-module.so varray-module.so socket-module.so rand-module.so fork-module.so csv-module.so base64-module.so chksum-module.so histogram-module.so stats-module.so json-module.so png-module.so iconv-module.so  zlib-module.so sysconf-module.so
+[  965s] make[2]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/objs'
+[  965s] cp /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/config.h /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/config.h
+[  965s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/slsmg-module.c -o slsmg-module.so -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[  968s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/termios-module.c -o termios-module.so -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[  970s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/select-module.c -o select-module.so -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[  973s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/fcntl-module.c -o fcntl-module.so -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[  975s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/varray-module.c -o varray-module.so -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[  977s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/socket-module.c -o socket-module.so  -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[  981s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/rand-module.c -o rand-module.so -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[  986s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/fork-module.c -o fork-module.so -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[  989s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/csv-module.c -o csv-module.so -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[  992s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c -o base64-module.so -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c: In function 'b64_decoder_accumulate_intrin':
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:4: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |    ^~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:377:4: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   377 |    NEXT_CHAR;
+[  993s]       |    ^~~~~~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:49: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |                                                 ^~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:377:4: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   377 |    NEXT_CHAR;
+[  993s]       |    ^~~~~~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:4: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |    ^~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:386:9: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   386 |         NEXT_CHAR;
+[  993s]       |         ^~~~~~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:49: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |                                                 ^~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:386:9: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   386 |         NEXT_CHAR;
+[  993s]       |         ^~~~~~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:4: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |    ^~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:391:14: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   391 |              NEXT_CHAR;
+[  993s]       |              ^~~~~~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:49: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |                                                 ^~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:391:14: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   391 |              NEXT_CHAR;
+[  993s]       |              ^~~~~~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:4: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |    ^~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:396:14: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   396 |              NEXT_CHAR;
+[  993s]       |              ^~~~~~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:49: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |                                                 ^~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:396:14: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   396 |              NEXT_CHAR;
+[  993s]       |              ^~~~~~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:4: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |    ^~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:417:9: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   417 |         NEXT_CHAR;
+[  993s]       |         ^~~~~~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:49: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |                                                 ^~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:417:9: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   417 |         NEXT_CHAR;
+[  993s]       |         ^~~~~~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:4: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |    ^~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:424:9: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   424 |         NEXT_CHAR;
+[  993s]       |         ^~~~~~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:49: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |                                                 ^~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:424:9: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   424 |         NEXT_CHAR;
+[  993s]       |         ^~~~~~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:4: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |    ^~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:431:9: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   431 |         NEXT_CHAR;
+[  993s]       |         ^~~~~~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:49: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |                                                 ^~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:431:9: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   431 |         NEXT_CHAR;
+[  993s]       |         ^~~~~~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:4: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |    ^~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:440:9: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   440 |         NEXT_CHAR;
+[  993s]       |         ^~~~~~~~~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:375:49: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+[  993s]   375 |    while (isspace ((unsigned char)*str)) str++; ch = *str++
+[  993s]       |                                                 ^~
+[  993s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/base64-module.c:440:9: note: in expansion of macro 'NEXT_CHAR'
+[  993s]   440 |         NEXT_CHAR;
+[  993s]       |         ^~~~~~~~~
+[  995s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -c /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/chksum-module.c
+[  997s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -c /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/chksum_md5.c
+[ 1000s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -c /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/chksum_sha1.c
+[ 1002s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -c /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/chksum_sha2.c
+[ 1003s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/chksum_sha2.c: In function 'update_num_bits_long':
+[ 1003s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/chksum_sha2.c:485:47: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+[ 1003s]   485 |    hi = ((_pSLuint64_Type*)(chksum->num_bits))[0];
+[ 1003s]       |                                               ^
+[ 1003s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/chksum_sha2.c:499:42: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+[ 1003s]   499 |    ((_pSLuint64_Type*)(chksum->num_bits))[0] = hi;
+[ 1003s]       |                                          ^
+[ 1005s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -c /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/chksum_crc.c
+[ 1008s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src chksum-module.o chksum_md5.o chksum_sha1.o chksum_sha2.o chksum_crc.o -o chksum-module.so -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[ 1008s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/histogram-module.c -o histogram-module.so -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[ 1013s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -c /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/stats-module.c
+[ 1021s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -c /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/stats_kendall.c
+[ 1024s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src stats-module.o stats_kendall.o -o stats-module.so -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[ 1024s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/json-module.c -o json-module.so -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[ 1028s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src  /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/png-module.c -o png-module.so -lpng -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[ 1032s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src  /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/iconv-module.c -o iconv-module.so  -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[ 1034s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src  /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/zlib-module.c -o zlib-module.so -lz -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[ 1037s] gcc -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src -shared -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection   -I/home/abuild/rpmbuild/BUILD/slang-2.3.3/src /home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/sysconf-module.c -o sysconf-module.so -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld    -lm
+[ 1039s] make[2]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/objs'
+[ 1039s] make[1]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules'
+[ 1039s] Use make install to install it.
+[ 1039s] + RPM_EC=0
+[ 1039s] ++ jobs -p
+[ 1039s] + exit 0
+[ 1039s] Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.2LqBuj
+[ 1039s] + umask 022
+[ 1039s] + cd /home/abuild/rpmbuild/BUILD
+[ 1039s] + '[' /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64 '!=' / ']'
+[ 1039s] + rm -rf /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64
+[ 1039s] ++ dirname /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64
+[ 1039s] + mkdir -p /home/abuild/rpmbuild/BUILDROOT
+[ 1039s] + mkdir /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64
+[ 1039s] + cd slang-2.3.3
+[ 1039s] + make install-all RPATH= 'INSTALL=install -p' DESTDIR=/home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64
+[ 1039s] autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/pkgconfig
+[ 1040s] mkdir -p -- /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/pkgconfig
+[ 1040s] install -p -m 644 slang.pc /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/pkgconfig/
+[ 1040s] cd src; /usr/bin/make install-elf
+[ 1040s] make[1]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/src'
+[ 1040s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/include
+[ 1040s] mkdir -p -- /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/include
+[ 1040s] installing slang.h and slcurses.h in /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/include/
+[ 1040s] install -p -m 644 /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.h /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/include/
+[ 1040s] install -p -m 644 /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slcurses.h /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/include/
+[ 1040s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2
+[ 1040s] mkdir -p -- /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2
+[ 1040s] install -p -m 644 ../changes.txt /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2/
+[ 1040s] install -p -m 644 ../COPYING /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2/
+[ 1040s] install -p -m 644 ../doc/slangdoc.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2/
+[ 1040s] install -p -m 644 ../doc/text/cref.txt /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2/
+[ 1040s] install -p -m 644 ../doc/text/cslang.txt /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2/
+[ 1040s] install -p -m 644 ../doc/text/slang.txt /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2/
+[ 1040s] install -p -m 644 ../doc/text/slangfun.txt /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2/
+[ 1040s] rm -f /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/libslang.so
+[ 1041s] rm -f /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/libslang.so.2
+[ 1041s] installing libslang.so.2.3.3 in /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64
+[ 1041s] install -p /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/elfobjs/libslang.so.2.3.3 /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/
+[ 1041s] cd /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64 && /bin/ln -sf libslang.so.2.3.3 libslang.so.2
+[ 1041s] cd /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64 && /bin/ln -sf libslang.so.2 libslang.so
+[ 1041s] 
+[ 1041s] libslang.so.2.3.3 created in /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64.
+[ 1041s] The links libslang.so and libslang.so.2 to libslang.so.2.3.3 were also created.
+[ 1041s] 
+[ 1041s] make[1]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/src'
+[ 1041s] Now installing slsh
+[ 1041s] cd slsh; /usr/bin/make install
+[ 1041s] make[1]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/slsh'
+[ 1041s] gcc objs/slsh.o objs/readline.o -o objs/slsh -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld -Wl,-export-dynamic -L/home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64  -L/usr/lib64 -lslang -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld  -ldl  -lm
+[ 1042s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/bin
+[ 1042s] mkdir -p -- /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/bin
+[ 1042s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/man/man1
+[ 1042s] mkdir -p -- /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/man/man1
+[ 1042s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/etc
+[ 1042s] mkdir -p -- /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/etc
+[ 1042s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1042s] mkdir -p -- /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1042s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/rline
+[ 1042s] mkdir -p -- /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/rline
+[ 1042s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1042s] mkdir -p -- /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1043s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/local-packages
+[ 1043s] mkdir -p -- /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/local-packages
+[ 1043s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/scripts
+[ 1043s] mkdir -p -- /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/scripts
+[ 1043s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html
+[ 1043s] mkdir -p -- /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html
+[ 1043s] install -p -m 644 lib/arrayfuns.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1043s] install -p -m 644 lib/autoload.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1043s] install -p -m 644 lib/cmdopt.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1043s] install -p -m 644 lib/fswalk.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1043s] install -p -m 644 lib/glob.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1043s] install -p -m 644 lib/listfuns.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1043s] install -p -m 644 lib/print.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1043s] install -p -m 644 lib/process.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1043s] install -p -m 644 lib/profile.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1043s] install -p -m 644 lib/readascii.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1043s] install -p -m 644 lib/require.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1043s] install -p -m 644 lib/setfuns.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1043s] install -p -m 644 lib/sldb.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1043s] install -p -m 644 lib/sldbcore.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1043s] install -p -m 644 lib/sldbsock.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1044s] install -p -m 644 lib/slshhelp.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1044s] install -p -m 644 lib/slshrl.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1044s] install -p -m 644 lib/stkcheck.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1044s] install -p -m 644 lib/structfuns.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1044s] install -p -m 644 lib/timestamp.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1044s] install -p -m 644 lib/rline/complete.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/rline/
+[ 1044s] install -p -m 644 lib/rline/editfuns.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/rline/
+[ 1044s] install -p -m 644 lib/rline/editor.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/rline/
+[ 1044s] install -p -m 644 lib/rline/emacskeys.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/rline/
+[ 1044s] install -p -m 644 lib/rline/history.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/rline/
+[ 1044s] install -p -m 644 lib/rline/histsrch.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/rline/
+[ 1044s] install -p -m 644 lib/rline/vikeys.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/rline/
+[ 1044s] install -p -m 644 lib/rline/slrline.rc /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/rline/
+[ 1044s] install -p scripts/jpegsize /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/scripts
+[ 1044s] install -p scripts/lsrpm /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/scripts
+[ 1044s] install -p scripts/sldb /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/scripts
+[ 1044s] install -p scripts/svnsh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/scripts
+[ 1044s] install -p scripts/slprof /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/scripts
+[ 1044s] install -p scripts/slstkchk /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/scripts
+[ 1044s] install -p scripts/slcov /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/scripts
+[ 1044s] install -p -m 644 lib/help/arrayfuns.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1044s] install -p -m 644 lib/help/cmdopt.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1044s] install -p -m 644 lib/help/fswalk.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1045s] install -p -m 644 lib/help/glob.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1045s] install -p -m 644 lib/help/listfuns.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1045s] install -p -m 644 lib/help/print.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1045s] install -p -m 644 lib/help/process.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1045s] install -p -m 644 lib/help/profile.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1045s] install -p -m 644 lib/help/readascii.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1045s] install -p -m 644 lib/help/require.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1045s] install -p -m 644 lib/help/setfuns.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1045s] install -p -m 644 lib/help/structfuns.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1045s] install -p -m 644 lib/help/timestamp.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1045s] install -p -m 644 doc/html/slshfun-1.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html/
+[ 1045s] install -p -m 644 doc/html/slshfun-10.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html/
+[ 1045s] install -p -m 644 doc/html/slshfun-11.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html/
+[ 1045s] install -p -m 644 doc/html/slshfun-12.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html/
+[ 1045s] install -p -m 644 doc/html/slshfun-13.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html/
+[ 1045s] install -p -m 644 doc/html/slshfun-2.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html/
+[ 1045s] install -p -m 644 doc/html/slshfun-3.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html/
+[ 1045s] install -p -m 644 doc/html/slshfun-4.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html/
+[ 1045s] install -p -m 644 doc/html/slshfun-5.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html/
+[ 1045s] install -p -m 644 doc/html/slshfun-6.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html/
+[ 1045s] install -p -m 644 doc/html/slshfun-7.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html/
+[ 1045s] install -p -m 644 doc/html/slshfun-8.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html/
+[ 1045s] install -p -m 644 doc/html/slshfun-9.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html/
+[ 1045s] install -p -m 644 doc/html/slshfun.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slsh/html/
+[ 1045s] install -p -m 644 doc/man/slsh.1 /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/man/man1/
+[ 1045s] install -p objs/slsh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/bin/
+[ 1045s] install -p -m 644 etc/slsh.rc /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/etc/
+[ 1045s] echo 'prepend_to_slang_load_path("/usr/share/slsh/local-packages");' >> /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/etc/slsh.rc
+[ 1046s] make[1]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/slsh'
+[ 1046s] Now installing the modules
+[ 1046s] cd modules; /usr/bin/make install
+[ 1046s] make[1]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules'
+[ 1046s] cd objs && /usr/bin/make slsmg-module.so termios-module.so select-module.so fcntl-module.so varray-module.so socket-module.so rand-module.so fork-module.so csv-module.so base64-module.so chksum-module.so histogram-module.so stats-module.so json-module.so png-module.so iconv-module.so  zlib-module.so sysconf-module.so
+[ 1046s] make[2]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/objs'
+[ 1046s] make[2]: 'slsmg-module.so' is up to date.
+[ 1046s] make[2]: 'termios-module.so' is up to date.
+[ 1046s] make[2]: 'select-module.so' is up to date.
+[ 1046s] make[2]: 'fcntl-module.so' is up to date.
+[ 1046s] make[2]: 'varray-module.so' is up to date.
+[ 1046s] make[2]: 'socket-module.so' is up to date.
+[ 1046s] make[2]: 'rand-module.so' is up to date.
+[ 1046s] make[2]: 'fork-module.so' is up to date.
+[ 1046s] make[2]: 'csv-module.so' is up to date.
+[ 1046s] make[2]: 'base64-module.so' is up to date.
+[ 1046s] make[2]: 'chksum-module.so' is up to date.
+[ 1046s] make[2]: 'histogram-module.so' is up to date.
+[ 1046s] make[2]: 'stats-module.so' is up to date.
+[ 1046s] make[2]: 'json-module.so' is up to date.
+[ 1046s] make[2]: 'png-module.so' is up to date.
+[ 1046s] make[2]: 'iconv-module.so' is up to date.
+[ 1046s] make[2]: 'zlib-module.so' is up to date.
+[ 1046s] make[2]: 'sysconf-module.so' is up to date.
+[ 1046s] make[2]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/objs'
+[ 1046s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] mkdir -p -- /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/slsmg-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/termios-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/select-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/fcntl-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/varray-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/socket-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/rand-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/fork-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/csv-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/base64-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/chksum-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/histogram-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/stats-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/json-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/png-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/iconv-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1046s] install -p objs/zlib-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1047s] install -p objs/sysconf-module.so /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/slang/v2/modules
+[ 1047s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 slsmg.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 termios.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 select.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 fcntl.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 varray.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 socket.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 rand.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 fork.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 csv.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 base64.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 chksum.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 histogram.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 stats.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 json.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 pcre.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 png.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 iconv.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 onig.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 zlib.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1047s] install -p -m 644 sysconf.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh
+[ 1048s] mkdir -p -- /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/statslib
+[ 1048s] install -p -m 644 statslib/ad_test.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/statslib/
+[ 1048s] install -p -m 644 statslib/ks_test.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/statslib/
+[ 1048s] install -p -m 644 statslib/kuiper.sl /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/statslib/
+[ 1048s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] mkdir -p -- /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/cool.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/coolwarm.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/copper.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/cubicl.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/cubicyf.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/drywet.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/ds9b.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/ds9sls.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/edge.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/gebco.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/globe.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/gray.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/haxby.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/hot.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/jet.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/no_green.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/ocean.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/polar.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1048s] install -p -m 644 cmaps/rainbow.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1049s] install -p -m 644 cmaps/red2green.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1049s] install -p -m 644 cmaps/relief.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1049s] install -p -m 644 cmaps/sealand.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1049s] install -p -m 644 cmaps/seis.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1049s] install -p -m 644 cmaps/split.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1049s] install -p -m 644 cmaps/topo.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1049s] install -p -m 644 cmaps/wysiwyg.map /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/cmaps
+[ 1049s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1049s] install -p -m 644 help/base64funs.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1049s] install -p -m 644 help/chksumfuns.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1049s] install -p -m 644 help/csvfuns.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1049s] install -p -m 644 help/forkfuns.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1049s] install -p -m 644 help/histfuns.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1049s] install -p -m 644 help/jsonfuns.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1049s] install -p -m 644 help/onigfuns.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1049s] install -p -m 644 help/pcrefuns.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1049s] install -p -m 644 help/pngfuns.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1049s] install -p -m 644 help/randfuns.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1049s] install -p -m 644 help/slsmg.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1049s] install -p -m 644 help/sockfuns.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1049s] install -p -m 644 help/statsfuns.hlp /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/slsh/help
+[ 1049s] make[1]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules'
+[ 1049s] 
+[ 1049s] On some systems, e.g., linux, you may also have to run ldconfig.
+[ 1049s] 
+[ 1049s] cd src; /usr/bin/make install-static
+[ 1050s] make[1]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/src'
+[ 1050s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/autoconf/mkinsdir.sh /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs
+[ 1050s] mkdir -p -- /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs
+[ 1050s] touch /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs/tstamp
+[ 1050s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG  -DMISC_TERMINFO_DIRS='""' /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltermin.c
+[ 1052s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltermin.c: In function 'try_open_tidir':
+[ 1052s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltermin.c:436:31: warning: '%s' directive writing up to 1018 bytes into a region of size between 3 and 1021 [-Wformat-overflow=]
+[ 1052s]   436 |         sprintf (file, "%s/%c/%s", tidir, *term, term);
+[ 1052s]       |                               ^~
+[ 1052s] In file included from /usr/include/stdio.h:964,
+[ 1052s]                  from /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slinclud.h:8,
+[ 1052s]                  from /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltermin.c:26:
+[ 1052s] In function 'sprintf',
+[ 1052s]     inlined from 'try_open_tidir' at /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltermin.c:436:2:
+[ 1052s] /usr/include/bits/stdio2.h:30:10: note: '__builtin___sprintf_chk' output between 4 and 2040 bytes into a destination of size 1024
+[ 1052s]    30 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+[ 1052s]       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 1052s]    31 |                                   __glibc_objsize (__s), __fmt,
+[ 1052s]       |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 1052s]    32 |                                   __va_arg_pack ());
+[ 1052s]       |                                   ~~~~~~~~~~~~~~~~~
+[ 1054s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sldisply.c
+[ 1063s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slutty.c
+[ 1065s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c
+[ 1081s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c: In function 'inner_interp':
+[ 1081s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:5827:23: warning: 'test' may be used uninitialized [-Wmaybe-uninitialized]
+[ 1081s]  5826 |                   if ((0 == pop_int (&test))
+[ 1081s]       |                       ~~~~~~~~~~~~~~~~~~~~~~
+[ 1081s]  5827 |                       && (test == 0))
+[ 1081s]       |                       ^~~~~~~~~~~~~~
+[ 1081s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:5825:23: note: 'test' was declared here
+[ 1081s]  5825 |                   int test;
+[ 1081s]       |                       ^~~~
+[ 1085s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c: In function 'lang_do_loops':
+[ 1085s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:3814:10: warning: 'blks' may be used uninitialized [-Wmaybe-uninitialized]
+[ 1085s]  3814 |    block = blks[0];
+[ 1085s]       |    ~~~~~~^~~~~~~~~
+[ 1085s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:3790:18: note: 'blks' declared here
+[ 1085s]  3790 |    SLBlock_Type *blks[4];
+[ 1085s]       |                  ^~~~
+[ 1085s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:4013:21: warning: 'first' may be used uninitialized [-Wmaybe-uninitialized]
+[ 1085s]  4013 |                   i += ctrl;
+[ 1085s]       |                   ~~^~~~~~~
+[ 1085s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:3789:8: note: 'first' was declared here
+[ 1085s]  3789 |    int first, last;
+[ 1085s]       |        ^~~~~
+[ 1085s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:3989:27: warning: 'last' may be used uninitialized [-Wmaybe-uninitialized]
+[ 1085s]  3989 |                        if (i > last) break;
+[ 1085s]       |                           ^
+[ 1085s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.c:3789:15: note: 'last' was declared here
+[ 1085s]  3789 |    int first, last;
+[ 1085s]       |               ^~~~
+[ 1090s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slarray.c
+[ 1104s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slclass.c
+[ 1110s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slcmd.c
+[ 1112s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slerr.c
+[ 1116s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slgetkey.c
+[ 1117s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slkeymap.c
+[ 1118s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slkeymap.c: In function 'find_the_key':
+[ 1118s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slkeymap.c:338:40: warning: the comparison will always evaluate as 'true' for the address of 'str' will never be NULL [-Waddress]
+[ 1118s]   338 |         if ((key != NULL) && (key->str != NULL))
+[ 1118s]       |                                        ^~
+[ 1118s] In file included from /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slkeymap.c:29:
+[ 1118s] /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.h:1531:18: note: 'str' declared here
+[ 1118s]  1531 |    unsigned char str[SLANG_MAX_KEYMAP_KEY_SEQ + 1];/* key sequence */
+[ 1118s]       |                  ^~~
+[ 1121s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slmalloc.c
+[ 1123s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slmath.c
+[ 1130s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slmemchr.c
+[ 1131s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slmemcmp.c
+[ 1133s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slmemcpy.c
+[ 1135s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slmemset.c
+[ 1137s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slmisc.c
+[ 1140s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slparse.c
+[ 1147s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slprepr.c
+[ 1150s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slregexp.c
+[ 1155s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slrline.c
+[ 1162s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slsearch.c
+[ 1165s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slsmg.c
+[ 1173s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG  -DSLANG_DOC_DIR='"/usr/share/doc/slang/v2"' -DSLANG_INSTALL_PREFIX='"/usr"' /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slstd.c
+[ 1177s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltoken.c
+[ 1184s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltypes.c
+[ 1187s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slxstrng.c
+[ 1189s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slcurses.c
+[ 1194s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slscroll.c
+[ 1196s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slsignal.c
+[ 1198s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slkeypad.c
+[ 1200s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slerrno.c
+[ 1202s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slstring.c
+[ 1206s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slstruct.c
+[ 1212s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slcmplex.c
+[ 1217s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slarrfun.c
+[ 1233s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG  -DMODULE_INSTALL_DIR='"/usr/lib64/slang/v2/modules"' -DMODULE_PATH_ENV_NAME='"SLANG_MODULE_PATH"' /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slimport.c
+[ 1235s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slpath.c
+[ 1238s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slarith.c
+[ 1419s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slassoc.c
+[ 1423s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slcompat.c
+[ 1424s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slposdir.c
+[ 1428s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slstdio.c
+[ 1432s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slproc.c
+[ 1434s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sltime.c
+[ 1437s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slstrops.c
+[ 1445s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slbstr.c
+[ 1449s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slpack.c
+[ 1452s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slintall.c
+[ 1454s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slistruc.c
+[ 1456s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slposio.c
+[ 1460s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slnspace.c
+[ 1462s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slarrmis.c
+[ 1464s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slospath.c
+[ 1466s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slscanf.c
+[ 1469s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sllower.c
+[ 1471s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slupper.c
+[ 1473s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slischar.c
+[ 1475s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slutf8.c
+[ 1478s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slwcwidth.c
+[ 1480s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slwclut.c
+[ 1484s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slcommon.c
+[ 1487s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/sllist.c
+[ 1491s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slexcept.c
+[ 1494s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slfpu.c
+[ 1495s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slsig.c
+[ 1498s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && gcc -c -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection  -Dunix -DSLANG   /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slboseos.c
+[ 1501s] rm -f /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs/libslang.a
+[ 1501s] cd /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs && ar cr libslang.a sltermin.o sldisply.o slutty.o slang.o slarray.o slclass.o slcmd.o slerr.o slgetkey.o slkeymap.o slmalloc.o slmath.o slmemchr.o slmemcmp.o slmemcpy.o slmemset.o slmisc.o slparse.o slprepr.o slregexp.o slrline.o slsearch.o slsmg.o slstd.o sltoken.o sltypes.o slxstrng.o slcurses.o slscroll.o slsignal.o slkeypad.o slerrno.o slstring.o slstruct.o slcmplex.o slarrfun.o slimport.o slpath.o slarith.o slassoc.o slcompat.o slposdir.o slstdio.o slproc.o sltime.o slstrops.o slbstr.o slpack.o slintall.o slistruc.o slposio.o slnspace.o slarrmis.o slospath.o slscanf.o sllower.o slupper.o slischar.o slutf8.o slwcwidth.o slwclut.o slcommon.o sllist.o slexcept.o slfpu.o slsig.o slboseos.o
+[ 1501s] ranlib /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs/libslang.a
+[ 1502s] 
+[ 1502s] libslang.a created in /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs
+[ 1502s] installing slang.h and slcurses.h in /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/include/
+[ 1502s] install -p -m 644 /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slang.h /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/include/
+[ 1502s] install -p -m 644 /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/slcurses.h /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/include/
+[ 1502s] install -p -m 644 ../changes.txt /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2/
+[ 1502s] install -p -m 644 ../COPYING /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2/
+[ 1502s] install -p -m 644 ../doc/slangdoc.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2/
+[ 1502s] install -p -m 644 ../doc/text/cref.txt /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2/
+[ 1502s] install -p -m 644 ../doc/text/cslang.txt /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2/
+[ 1502s] install -p -m 644 ../doc/text/slang.txt /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2/
+[ 1502s] install -p -m 644 ../doc/text/slangfun.txt /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang/v2/
+[ 1502s] installing /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs/libslang.a in /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/
+[ 1502s] install -p -m 644 /home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs/libslang.a /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/
+[ 1503s] ranlib /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/lib64/libslang.a
+[ 1503s] make[1]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/src'
+[ 1503s] + mkdir /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/include/slang
+[ 1503s] + for h in slang.h slcurses.h
+[ 1503s] + ln -s ../slang.h /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/include/slang/slang.h
+[ 1503s] + for h in slang.h slcurses.h
+[ 1503s] + ln -s ../slcurses.h /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/include/slang/slcurses.h
+[ 1503s] + /usr/lib/rpm/check-buildroot
+[ 1504s] + /usr/lib/rpm/brp-ldconfig
+[ 1504s] + /usr/lib/rpm/brp-compress
+[ 1504s] + /usr/lib/rpm/brp-strip /usr/bin/strip
+[ 1506s] + /usr/lib/rpm/brp-strip-comment-note /usr/bin/strip /usr/bin/objdump
+[ 1506s] + /usr/lib/rpm/brp-strip-static-archive /usr/bin/strip
+[ 1508s] + /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1 1
+[ 1508s] + /usr/lib/rpm/brp-python-hardlink
+[ 1508s] Executing(%check): /bin/sh -e /var/tmp/rpm-tmp.MBJEdK
+[ 1508s] + umask 022
+[ 1508s] + cd /home/abuild/rpmbuild/BUILD
+[ 1508s] + cd slang-2.3.3
+[ 1508s] + make check
+[ 1508s] cd src; /usr/bin/make elf
+[ 1509s] make[1]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/src'
+[ 1509s] make[1]: Nothing to be done for 'elf'.
+[ 1509s] make[1]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/src'
+[ 1509s] cd slsh; /usr/bin/make all
+[ 1509s] make[1]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/slsh'
+[ 1509s] make[1]: Nothing to be done for 'all'.
+[ 1509s] make[1]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/slsh'
+[ 1509s] cd modules; /usr/bin/make all
+[ 1509s] make[1]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules'
+[ 1509s] cd objs && /usr/bin/make slsmg-module.so termios-module.so select-module.so fcntl-module.so varray-module.so socket-module.so rand-module.so fork-module.so csv-module.so base64-module.so chksum-module.so histogram-module.so stats-module.so json-module.so png-module.so iconv-module.so  zlib-module.so sysconf-module.so
+[ 1509s] make[2]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/objs'
+[ 1509s] make[2]: 'slsmg-module.so' is up to date.
+[ 1509s] make[2]: 'termios-module.so' is up to date.
+[ 1509s] make[2]: 'select-module.so' is up to date.
+[ 1509s] make[2]: 'fcntl-module.so' is up to date.
+[ 1509s] make[2]: 'varray-module.so' is up to date.
+[ 1509s] make[2]: 'socket-module.so' is up to date.
+[ 1509s] make[2]: 'rand-module.so' is up to date.
+[ 1509s] make[2]: 'fork-module.so' is up to date.
+[ 1509s] make[2]: 'csv-module.so' is up to date.
+[ 1509s] make[2]: 'base64-module.so' is up to date.
+[ 1509s] make[2]: 'chksum-module.so' is up to date.
+[ 1509s] make[2]: 'histogram-module.so' is up to date.
+[ 1509s] make[2]: 'stats-module.so' is up to date.
+[ 1509s] make[2]: 'json-module.so' is up to date.
+[ 1509s] make[2]: 'png-module.so' is up to date.
+[ 1509s] make[2]: 'iconv-module.so' is up to date.
+[ 1509s] make[2]: 'zlib-module.so' is up to date.
+[ 1509s] make[2]: 'sysconf-module.so' is up to date.
+[ 1509s] make[2]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/objs'
+[ 1509s] make[1]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules'
+[ 1509s] Use make install to install it.
+[ 1509s] make[1]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/src'
+[ 1509s] cd test; /usr/bin/make CC="gcc" CFLAGS="-O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection " OTHER_CFLAGS="" OTHER_LIBS="-lm" SLANGLIB="/home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs"
+[ 1509s] make[2]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/src/test'
+[ 1509s] gcc -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection    sltest.c -o sltest -I.. -L/home/abuild/rpmbuild/BUILD/slang-2.3.3/src/objs -lslang -lm
+[ 1515s] /bin/rm -rf tmpfile*.* tmpdir*.*
+[ 1515s] 
+[ 1515s] Running tests:
+[ 1515s] 
+[ 1515s] Testing argv processing ...Ok
+[ 1515s] Testing argv processing [UTF-8 mode] ...Ok
+[ 1515s] Testing syntax ...Ok
+[ 1515s] Testing syntax [UTF-8 mode] ...Ok
+[ 1515s] Testing Short Ciruit Operators ...Ok
+[ 1515s] Testing Short Ciruit Operators [UTF-8 mode] ...Ok
+[ 1515s] Testing _eqs ...Ok
+[ 1515s] Testing _eqs [UTF-8 mode] ...Ok
+[ 1516s] Testing sscanf ...Ok
+[ 1516s] Testing sscanf [UTF-8 mode] ...Ok
+[ 1516s] Testing looping constructs ...Ok
+[ 1516s] Testing looping constructs [UTF-8 mode] ...Ok
+[ 1516s] Testing Arithmetic ...Ok
+[ 1516s] Testing Arithmetic [UTF-8 mode] ...Ok
+[ 1517s] Testing array functions ...Ok
+[ 1518s] Testing array functions [UTF-8 mode] ...Ok
+[ 1518s] Testing string functions ...Ok
+[ 1518s] Testing string functions [UTF-8 mode] ...Ok
+[ 1518s] Testing Binary Strings ...Ok
+[ 1518s] Testing Binary Strings [UTF-8 mode] ...Ok
+[ 1518s] Testing pack and unpack functions ...Ok
+[ 1518s] Testing pack and unpack functions [UTF-8 mode] ...Ok
+[ 1518s] Testing stdio routines ...Ok
+[ 1519s] Testing stdio routines [UTF-8 mode] ...Ok
+[ 1519s] Testing Associative Arrays ...Ok
+[ 1519s] Testing Associative Arrays [UTF-8 mode] ...Ok
+[ 1519s] Testing recursive function modifications ...Ok
+[ 1519s] Testing recursive function modifications [UTF-8 mode] ...Ok
+[ 1519s] Testing structures ...Ok
+[ 1519s] Testing structures [UTF-8 mode] ...Ok
+[ 1519s] Testing NameSpace routines ...Ok
+[ 1519s] Testing NameSpace routines [UTF-8 mode] ...Ok
+[ 1519s] Testing path ...Ok
+[ 1519s] Testing path [UTF-8 mode] ...Ok
+[ 1520s] Testing #ifeval ...Ok
+[ 1520s] Testing #ifeval [UTF-8 mode] ...Ok
+[ 1520s] Testing Any_Type ...Ok
+[ 1520s] Testing Any_Type [UTF-8 mode] ...Ok
+[ 1520s] Testing Matrix Multiplications ...Ok
+[ 1520s] Testing Matrix Multiplications [UTF-8 mode] ...Ok
+[ 1520s] Testing time functions ...Ok
+[ 1520s] Testing time functions [UTF-8 mode] ...Ok
+[ 1520s] Testing utf8 ...Ok
+[ 1520s] Testing utf8 [UTF-8 mode] ...Ok
+[ 1521s] Testing exceptions ...Ok
+[ 1521s] Testing exceptions [UTF-8 mode] ...Ok
+[ 1521s] Known Bugs or not yet implemented features:
+[ 1521s] 	Range arrays of Short, Long, LongLong types converted to Int_Type
+[ 1522s] Known Bugs or not yet implemented features:
+[ 1522s] 	Range arrays of Short, Long, LongLong types converted to Int_Type
+[ 1522s] Testing lists ...Ok
+[ 1523s] Testing lists [UTF-8 mode] ...Ok
+[ 1523s] Testing regexp ...Ok
+[ 1523s] Testing regexp [UTF-8 mode] ...Ok
+[ 1524s] Testing method calls ...Ok
+[ 1524s] Testing method calls [UTF-8 mode] ...Ok
+[ 1524s] Testing dereferences ...Ok
+[ 1524s] Testing dereferences [UTF-8 mode] ...Ok
+[ 1524s] Testing NaN and Inf ...Ok
+[ 1524s] Testing NaN and Inf [UTF-8 mode] ...Ok
+[ 1524s] Testing literal integer overflow ...Ok
+[ 1524s] Testing literal integer overflow [UTF-8 mode] ...Ok
+[ 1527s] Testing sorting ...Ok
+[ 1529s] Testing sorting [UTF-8 mode] ...Ok
+[ 1530s] Testing long long ...Ok
+[ 1530s] Testing long long [UTF-8 mode] ...Ok
+[ 1530s] Testing signals ...
+[ 1532s] 	Pausing for 2 seconds for alarm test.
+[ 1534s] 	Pausing for 2.5 seconds for setitimer test..
+[ 1534s] 	(make detected: skipping test_sigsuspend)
+[ 1534s] Ok
+[ 1534s] Testing signals [UTF-8 mode] ...
+[ 1536s] 	Pausing for 2 seconds for alarm test.
+[ 1539s] 	Pausing for 2.5 seconds for setitimer test..
+[ 1539s] 	(make detected: skipping test_sigsuspend)
+[ 1539s] Ok
+[ 1539s] Testing dollar strings ...Ok
+[ 1539s] Testing dollar strings [UTF-8 mode] ...Ok
+[ 1539s] Testing provide and require ...Ok
+[ 1539s] Testing provide and require [UTF-8 mode] ...Ok
+[ 1539s] Testing doc functions ...Ok
+[ 1539s] Testing doc functions [UTF-8 mode] ...Ok
+[ 1539s] Testing debugger support ...Ok
+[ 1539s] Testing debugger support [UTF-8 mode] ...Ok
+[ 1540s] Testing qualifiers ...Ok
+[ 1540s] Testing qualifiers [UTF-8 mode] ...Ok
+[ 1540s] Testing Comparison Operators ...Ok
+[ 1540s] Testing Comparison Operators [UTF-8 mode] ...Ok
+[ 1540s] Testing break and continue N ...Ok
+[ 1540s] Testing break and continue N [UTF-8 mode] ...Ok
+[ 1540s] Testing Multiline strings ...Ok
+[ 1540s] Testing Multiline strings [UTF-8 mode] ...Ok
+[ 1540s] Testing stack functions ...Ok
+[ 1540s] Testing stack functions [UTF-8 mode] ...Ok
+[ 1540s] Testing misc ...Ok
+[ 1540s] Testing misc [UTF-8 mode] ...Ok
+[ 1541s] Testing POSIX I/O routines ...Ok
+[ 1541s] Testing POSIX I/O routines [UTF-8 mode] ...Ok
+[ 1541s] Testing posdir ...Ok
+[ 1541s] Testing posdir [UTF-8 mode] ...Ok
+[ 1541s] Testing proc ...Ok
+[ 1541s] Testing proc [UTF-8 mode] ...Ok
+[ 1541s] Testing Math ...Ok
+[ 1542s] Testing Math [UTF-8 mode] ...Ok
+[ 1542s] Testing autoload ...Ok
+[ 1542s] Testing autoload [UTF-8 mode] ...Ok
+[ 1542s] Testing more NameSpace routines ...Ok
+[ 1542s] Testing more NameSpace routines [UTF-8 mode] ...Ok
+[ 1542s] Testing slprep ...Ok
+[ 1542s] Testing slprep [UTF-8 mode] ...Ok
+[ 1542s] Testing argv processing ...Ok
+[ 1543s] Testing argv processing [UTF-8 mode] ...Ok
+[ 1543s] Testing syntax ...Ok
+[ 1543s] Testing syntax [UTF-8 mode] ...Ok
+[ 1543s] Testing Short Ciruit Operators ...Ok
+[ 1543s] Testing Short Ciruit Operators [UTF-8 mode] ...Ok
+[ 1543s] Testing _eqs ...Ok
+[ 1543s] Testing _eqs [UTF-8 mode] ...Ok
+[ 1543s] Testing sscanf ...Ok
+[ 1543s] Testing sscanf [UTF-8 mode] ...Ok
+[ 1544s] Testing looping constructs ...Ok
+[ 1544s] Testing looping constructs [UTF-8 mode] ...Ok
+[ 1544s] Testing Arithmetic ...Ok
+[ 1544s] Testing Arithmetic [UTF-8 mode] ...Ok
+[ 1544s] Testing array functions ...Ok
+[ 1545s] Testing array functions [UTF-8 mode] ...Ok
+[ 1545s] Testing string functions ...Ok
+[ 1545s] Testing string functions [UTF-8 mode] ...Ok
+[ 1545s] Testing Binary Strings ...Ok
+[ 1546s] Testing Binary Strings [UTF-8 mode] ...Ok
+[ 1546s] Testing pack and unpack functions ...Ok
+[ 1546s] Testing pack and unpack functions [UTF-8 mode] ...Ok
+[ 1546s] Testing stdio routines ...Ok
+[ 1546s] Testing stdio routines [UTF-8 mode] ...Ok
+[ 1546s] Testing Associative Arrays ...Ok
+[ 1546s] Testing Associative Arrays [UTF-8 mode] ...Ok
+[ 1546s] Testing recursive function modifications ...Ok
+[ 1547s] Testing recursive function modifications [UTF-8 mode] ...Ok
+[ 1547s] Testing structures ...Ok
+[ 1547s] Testing structures [UTF-8 mode] ...Ok
+[ 1547s] Testing NameSpace routines ...Ok
+[ 1547s] Testing NameSpace routines [UTF-8 mode] ...Ok
+[ 1547s] Testing path ...Ok
+[ 1547s] Testing path [UTF-8 mode] ...Ok
+[ 1547s] Testing #ifeval ...Ok
+[ 1547s] Testing #ifeval [UTF-8 mode] ...Ok
+[ 1547s] Testing Any_Type ...Ok
+[ 1547s] Testing Any_Type [UTF-8 mode] ...Ok
+[ 1548s] Testing Matrix Multiplications ...Ok
+[ 1548s] Testing Matrix Multiplications [UTF-8 mode] ...Ok
+[ 1548s] Testing time functions ...Ok
+[ 1548s] Testing time functions [UTF-8 mode] ...Ok
+[ 1548s] Testing utf8 ...Ok
+[ 1548s] Testing utf8 [UTF-8 mode] ...Ok
+[ 1548s] Testing exceptions ...Ok
+[ 1549s] Testing exceptions [UTF-8 mode] ...Ok
+[ 1549s] Known Bugs or not yet implemented features:
+[ 1549s] 	Range arrays of Short, Long, LongLong types converted to Int_Type
+[ 1549s] Known Bugs or not yet implemented features:
+[ 1549s] 	Range arrays of Short, Long, LongLong types converted to Int_Type
+[ 1550s] Testing lists ...Ok
+[ 1551s] Testing lists [UTF-8 mode] ...Ok
+[ 1551s] Testing regexp ...Ok
+[ 1551s] Testing regexp [UTF-8 mode] ...Ok
+[ 1551s] Testing method calls ...Ok
+[ 1551s] Testing method calls [UTF-8 mode] ...Ok
+[ 1551s] Testing dereferences ...Ok
+[ 1551s] Testing dereferences [UTF-8 mode] ...Ok
+[ 1552s] Testing NaN and Inf ...Ok
+[ 1552s] Testing NaN and Inf [UTF-8 mode] ...Ok
+[ 1552s] Testing literal integer overflow ...Ok
+[ 1552s] Testing literal integer overflow [UTF-8 mode] ...Ok
+[ 1555s] Testing sorting ...Ok
+[ 1557s] Testing sorting [UTF-8 mode] ...Ok
+[ 1557s] Testing long long ...Ok
+[ 1557s] Testing long long [UTF-8 mode] ...Ok
+[ 1557s] Testing signals ...
+[ 1559s] 	Pausing for 2 seconds for alarm test.
+[ 1562s] 	Pausing for 2.5 seconds for setitimer test..
+[ 1562s] 	(make detected: skipping test_sigsuspend)
+[ 1562s] Ok
+[ 1562s] Testing signals [UTF-8 mode] ...
+[ 1564s] 	Pausing for 2 seconds for alarm test.
+[ 1567s] 	Pausing for 2.5 seconds for setitimer test..
+[ 1567s] 	(make detected: skipping test_sigsuspend)
+[ 1567s] Ok
+[ 1567s] Testing dollar strings ...Ok
+[ 1567s] Testing dollar strings [UTF-8 mode] ...Ok
+[ 1567s] Testing provide and require ...Ok
+[ 1567s] Testing provide and require [UTF-8 mode] ...Ok
+[ 1567s] Testing doc functions ...Ok
+[ 1567s] Testing doc functions [UTF-8 mode] ...Ok
+[ 1567s] Testing debugger support ...Ok
+[ 1567s] Testing debugger support [UTF-8 mode] ...Ok
+[ 1567s] Testing qualifiers ...Ok
+[ 1567s] Testing qualifiers [UTF-8 mode] ...Ok
+[ 1568s] Testing Comparison Operators ...Ok
+[ 1568s] Testing Comparison Operators [UTF-8 mode] ...Ok
+[ 1568s] Testing break and continue N ...Ok
+[ 1568s] Testing break and continue N [UTF-8 mode] ...Ok
+[ 1568s] Testing Multiline strings ...Ok
+[ 1568s] Testing Multiline strings [UTF-8 mode] ...Ok
+[ 1568s] Testing stack functions ...Ok
+[ 1568s] Testing stack functions [UTF-8 mode] ...Ok
+[ 1568s] Testing misc ...Ok
+[ 1568s] Testing misc [UTF-8 mode] ...Ok
+[ 1568s] Testing POSIX I/O routines ...Ok
+[ 1568s] Testing POSIX I/O routines [UTF-8 mode] ...Ok
+[ 1569s] Testing posdir ...Ok
+[ 1569s] Testing posdir [UTF-8 mode] ...Ok
+[ 1569s] Testing proc ...Ok
+[ 1569s] Testing proc [UTF-8 mode] ...Ok
+[ 1569s] Testing Math ...Ok
+[ 1570s] Testing Math [UTF-8 mode] ...Ok
+[ 1570s] 
+[ 1570s] All tests passed.
+[ 1570s] 
+[ 1570s] make[2]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/src/test'
+[ 1570s] make[1]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/src'
+[ 1570s] make[1]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules'
+[ 1570s] cd objs && /usr/bin/make slsmg-module.so termios-module.so select-module.so fcntl-module.so varray-module.so socket-module.so rand-module.so fork-module.so csv-module.so base64-module.so chksum-module.so histogram-module.so stats-module.so json-module.so png-module.so iconv-module.so  zlib-module.so sysconf-module.so
+[ 1570s] make[2]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/objs'
+[ 1570s] make[2]: 'slsmg-module.so' is up to date.
+[ 1570s] make[2]: 'termios-module.so' is up to date.
+[ 1570s] make[2]: 'select-module.so' is up to date.
+[ 1570s] make[2]: 'fcntl-module.so' is up to date.
+[ 1570s] make[2]: 'varray-module.so' is up to date.
+[ 1570s] make[2]: 'socket-module.so' is up to date.
+[ 1570s] make[2]: 'rand-module.so' is up to date.
+[ 1570s] make[2]: 'fork-module.so' is up to date.
+[ 1570s] make[2]: 'csv-module.so' is up to date.
+[ 1570s] make[2]: 'base64-module.so' is up to date.
+[ 1570s] make[2]: 'chksum-module.so' is up to date.
+[ 1570s] make[2]: 'histogram-module.so' is up to date.
+[ 1570s] make[2]: 'stats-module.so' is up to date.
+[ 1570s] make[2]: 'json-module.so' is up to date.
+[ 1570s] make[2]: 'png-module.so' is up to date.
+[ 1570s] make[2]: 'iconv-module.so' is up to date.
+[ 1570s] make[2]: 'zlib-module.so' is up to date.
+[ 1570s] make[2]: 'sysconf-module.so' is up to date.
+[ 1570s] make[2]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules/objs'
+[ 1570s] 
+[ 1570s] Running module tests:
+[ 1570s] 
+[ 1570s] Testing slsmg module...(module loaded)...OK
+[ 1570s] Testing termios module...(module loaded)...OK
+[ 1570s] Testing select module...(module loaded)...OK
+[ 1570s] Testing fcntl module...OK
+[ 1570s] Testing varray module...OK
+[ 1571s] Testing socket module...OK
+[ 1572s] Testing rand module...OK
+[ 1572s] Testing fork module...OK
+[ 1572s] Testing csv module...OK
+[ 1572s] Testing base64 module...OK
+[ 1582s] Testing chksum module...OK
+[ 1584s] Testing hist module...OK
+[ 1584s] Testing stats module...OK
+[ 1584s] Testing json module...OK
+[ 1584s] Testing png module...OK
+[ 1585s] Testing zlib module...OK
+[ 1585s] Testing iconv module...OK
+[ 1585s] 
+[ 1585s] All tests passed.
+[ 1585s] 
+[ 1585s] make[1]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/modules'
+[ 1585s] make[1]: Entering directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/slsh'
+[ 1585s] cd lib/test && ./runtests.sh test_*.sl
+[ 1585s] 
+[ 1585s] Running slsh lib tests:
+[ 1585s] 
+[ 1585s] Testing arrayfuns functions...OK
+[ 1585s] Testing cmdopt functions...OK
+[ 1585s] Testing glob functions...OK
+[ 1585s] Testing listfuns functions...OK
+[ 1587s] Testing print functions...OK
+[ 1587s] Testing process functions...OK
+[ 1587s] Testing readascii functions...OK
+[ 1587s] Testing require functions...OK
+[ 1587s] Testing setfuns functions...OK
+[ 1587s] Testing structfuns functions...OK
+[ 1587s] Testing timestamp functions...OK
+[ 1587s] 
+[ 1587s] All tests passed.
+[ 1587s] 
+[ 1587s] make[1]: Leaving directory '/home/abuild/rpmbuild/BUILD/slang-2.3.3/slsh'
+[ 1587s] + RPM_EC=0
+[ 1587s] ++ jobs -p
+[ 1587s] + exit 0
+[ 1587s] Processing files: slang-2.3.3-5.1.oe2403fix.riscv64
+[ 1587s] Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.sEeTg1
+[ 1587s] + umask 022
+[ 1587s] + cd /home/abuild/rpmbuild/BUILD
+[ 1587s] + cd slang-2.3.3
+[ 1587s] + DOCDIR=/home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang
+[ 1587s] + export LC_ALL=C
+[ 1587s] + LC_ALL=C
+[ 1587s] + export DOCDIR
+[ 1587s] + /usr/bin/mkdir -p /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang
+[ 1588s] + cp -pr NEWS /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang
+[ 1588s] + cp -pr slsh/doc/html/slshfun-1.html slsh/doc/html/slshfun-10.html slsh/doc/html/slshfun-11.html slsh/doc/html/slshfun-12.html slsh/doc/html/slshfun-13.html slsh/doc/html/slshfun-2.html slsh/doc/html/slshfun-3.html slsh/doc/html/slshfun-4.html slsh/doc/html/slshfun-5.html slsh/doc/html/slshfun-6.html slsh/doc/html/slshfun-7.html slsh/doc/html/slshfun-8.html slsh/doc/html/slshfun-9.html slsh/doc/html/slshfun.html /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang
+[ 1588s] + RPM_EC=0
+[ 1588s] ++ jobs -p
+[ 1588s] + exit 0
+[ 1588s] Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.0ZFZgS
+[ 1588s] + umask 022
+[ 1588s] + cd /home/abuild/rpmbuild/BUILD
+[ 1588s] + cd slang-2.3.3
+[ 1588s] + LICENSEDIR=/home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/licenses/slang
+[ 1588s] + export LC_ALL=C
+[ 1588s] + LC_ALL=C
+[ 1588s] + export LICENSEDIR
+[ 1588s] + /usr/bin/mkdir -p /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/licenses/slang
+[ 1588s] + cp -pr COPYING /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/licenses/slang
+[ 1588s] + RPM_EC=0
+[ 1588s] ++ jobs -p
+[ 1588s] + exit 0
+[ 1594s] Provides: config(slang) = 2.3.3-5.1.oe2403fix libslang.so.2()(64bit) libslang.so.2(SLANG2)(64bit) libslang.so.2(SLANG2.1.0)(64bit) libslang.so.2(SLANG2.1.1)(64bit) libslang.so.2(SLANG2.2.0)(64bit) libslang.so.2(SLANG2.2.1)(64bit) libslang.so.2(SLANG2.2.3)(64bit) libslang.so.2(SLANG2.3.0)(64bit) slang = 2.3.3-5.1.oe2403fix slang(riscv-64) = 2.3.3-5.1.oe2403fix slang-slsh = 2.3.3-5.1.oe2403fix
+[ 1594s] Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+[ 1594s] Requires: /usr/bin/env ld-linux-riscv64-lp64d.so.1()(64bit) ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit) libc.so.6()(64bit) libc.so.6(GLIBC_2.27)(64bit) libc.so.6(GLIBC_2.33)(64bit) libc.so.6(GLIBC_2.34)(64bit) libm.so.6()(64bit) libm.so.6(GLIBC_2.27)(64bit) libpng16.so.16()(64bit) libpng16.so.16(PNG16_0)(64bit) libslang.so.2()(64bit) libslang.so.2(SLANG2)(64bit) libslang.so.2(SLANG2.1.0)(64bit) libslang.so.2(SLANG2.3.0)(64bit) libz.so.1()(64bit) rtld(GNU_HASH)
+[ 1594s] Obsoletes: slang-slsh < 2.3.3-5.1.oe2403fix
+[ 1594s] Processing files: slang-devel-2.3.3-5.1.oe2403fix.riscv64
+[ 1594s] Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.uGKRQx
+[ 1594s] + umask 022
+[ 1594s] + cd /home/abuild/rpmbuild/BUILD
+[ 1594s] + cd slang-2.3.3
+[ 1594s] + DOCDIR=/home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang-devel
+[ 1594s] + export LC_ALL=C
+[ 1594s] + LC_ALL=C
+[ 1594s] + export DOCDIR
+[ 1594s] + /usr/bin/mkdir -p /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang-devel
+[ 1594s] + cp -pr doc/text/cref.txt doc/text/cslang.txt doc/text/slang.txt doc/text/slangfun.txt /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang-devel
+[ 1594s] + cp -pr doc/README /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang-devel
+[ 1594s] + cp -pr doc/grammar.txt /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64/usr/share/doc/slang-devel
+[ 1594s] + RPM_EC=0
+[ 1594s] ++ jobs -p
+[ 1594s] + exit 0
+[ 1595s] Provides: pkgconfig(slang) = 2.3.3 slang-devel = 2.3.3-5.1.oe2403fix slang-devel(riscv-64) = 2.3.3-5.1.oe2403fix
+[ 1595s] Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+[ 1595s] Requires: /usr/bin/pkg-config
+[ 1595s] Processing files: slang-help-2.3.3-5.1.oe2403fix.noarch
+[ 1595s] Provides: slang-help = 2.3.3-5.1.oe2403fix
+[ 1595s] Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+[ 1595s] Checking for unpackaged file(s): /usr/lib/rpm/check-files /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64
+[ 1596s] Wrote: /home/abuild/rpmbuild/SRPMS/slang-2.3.3-5.1.oe2403fix.src.rpm
+[ 1596s] Wrote: /home/abuild/rpmbuild/RPMS/noarch/slang-help-2.3.3-5.1.oe2403fix.noarch.rpm
+[ 1596s] Wrote: /home/abuild/rpmbuild/RPMS/riscv64/slang-devel-2.3.3-5.1.oe2403fix.riscv64.rpm
+[ 1597s] Wrote: /home/abuild/rpmbuild/RPMS/riscv64/slang-2.3.3-5.1.oe2403fix.riscv64.rpm
+[ 1597s] Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.fVsvMY
+[ 1597s] + umask 022
+[ 1597s] + cd /home/abuild/rpmbuild/BUILD
+[ 1597s] + cd slang-2.3.3
+[ 1597s] + /usr/bin/rm -rf /home/abuild/rpmbuild/BUILDROOT/slang-2.3.3-5.1.oe2403fix.riscv64
+[ 1597s] + RPM_EC=0
+[ 1597s] ++ jobs -p
+[ 1597s] + exit 0
+[ 1597s] Executing(rmbuild): /bin/sh -e /var/tmp/rpm-tmp.BY7Ts0
+[ 1597s] + umask 022
+[ 1597s] + cd /home/abuild/rpmbuild/BUILD
+[ 1597s] + rm -rf slang-2.3.3 slang-2.3.3.gemspec
+[ 1597s] + RPM_EC=0
+[ 1597s] ++ jobs -p
+[ 1597s] + exit 0
+[ 1599s] ... checking for files with abuild user/group
+[ 1599s] Warning: mkbaselibs missing in build root, skipping baselibs
+[ 1599s] 
+[ 1599s] riscv64-oe2309-iscas-lion-docker-chroot-01-20c144g finished "build slang.spec" at Mon Apr  1 15:09:46 UTC 2024.
+[ 1599s] 
